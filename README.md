@@ -41,8 +41,13 @@
 
 ### 📊 GitHub Stats & Metrics
 
+* **Profile Overview:** Total contributions, pull requests, and code reviews tracked via GitHub.
+* **Top Languages:** JavaScript, HTML/CSS, C/C++, and Python.
+* **Activity Streak:** Consistent daily commits across personal projects and portfolio repos.
+
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=dszae&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="Dipesh's GitHub Stats" />
-  <br/><br/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=dszae&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
+  <p><i>Check out my real-time activity directly on my GitHub profile graphs!</i></p>
+  <a href="https://github.com/dszae">
+    <img src="https://img.shields.io/badge/View%20GitHub%20Profile-0b0e14?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Profile" />
+  </a>
 </div>
