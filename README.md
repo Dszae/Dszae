@@ -51,12 +51,5 @@
 | 💻 **Primary Languages** | `JavaScript`, `C/C++`, `Python`, `HTML/CSS` |
 
 <br/>
-
-<a href="https://github.com/dsz">
-  <img src="https://img.shields.io/badge/GitHub-dszae-blue?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Profile" />
-</a>
-<a href="https://www.dipeshsapkota7.com.np/">
-  <img src="https://img.shields.io/badge/Portfolio-Live_Site-0b0e14?style=for-the-badge&logo=google-chrome&logoColor=3b82f6" alt="Live Portfolio" />
-</a>
-
+]
 </div>
