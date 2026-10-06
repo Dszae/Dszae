@@ -1,0 +1,6 @@
+# Optional local portrait preparation only; not installed by the daily workflow.
+-r requirements.txt
+Pillow==12.0.0
+numpy==2.3.4
+opencv-python-headless==4.12.0.88
+rembg[cpu]==2.0.68
