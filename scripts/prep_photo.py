@@ -30,8 +30,10 @@ def main() -> int:
     try:
         image = Image.open(args.input).convert("RGBA")
         try:
-            from rembg import remove
-            image = remove(image).convert("RGBA")
+            from rembg import new_session, remove
+            # The rembg default is a 1 GB model. U2NetP is a small, usable CPU
+            # model and keeps first-run downloads reasonable for local setup.
+            image = remove(image, session=new_session("u2netp")).convert("RGBA")
         except Exception as exc:
             print(f"Background removal unavailable ({exc}); continuing with the supplied image.", file=sys.stderr)
 
