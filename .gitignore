@@ -1,0 +1,5 @@
+# Keep the original portrait on your machine; only publish the generated ASCII art.
+/source-photo.jpg
+/source-prepped.png
+__pycache__/
+*.py[cod]

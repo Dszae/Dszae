@@ -26,7 +26,7 @@ def main() -> int:
 
     last = max(days)
     # Align the 53-column display to Sunday and include the trailing days of the year view.
-    end = last + timedelta(days=(6 - last.weekday() - 1) % 7)
+    end = last + timedelta(days=(6 - last.weekday()) % 7)
     start = end - timedelta(days=7 * 52 + 6)
     start -= timedelta(days=(start.weekday() + 1) % 7)
     total_weeks = ((end - start).days + 1) // 7

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 168" role="img" aria-labelledby="title desc">
+<title id="title">Dipesh Sapkota — portrait pending</title><desc id="desc">Add a personal source-photo.jpg and run the portrait scripts to generate the ASCII portrait.</desc>
+<rect width="820" height="168" rx="10" fill="#0d1117"/><rect x="1" y="1" width="818" height="166" rx="9" fill="none" stroke="#30363d"/>
+<text x="24" y="42" fill="#7d8590" font-family="monospace" font-size="14">portrait renderer / awaiting source image</text>
+<text x="24" y="82" fill="#c9d1d9" font-family="monospace" font-size="14">Place your own source-photo.jpg in the repository</text>
+<text x="24" y="108" fill="#c9d1d9" font-family="monospace" font-size="14">then run prep_photo.py and make_ascii_svg.py.</text>
+<text x="24" y="143" fill="#3fb950" font-family="monospace" font-size="14">$ _</text></svg>

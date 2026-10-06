@@ -29,6 +29,9 @@ def main() -> int:
 
     soup = BeautifulSoup(response.text, "html.parser")
     cells = soup.select("td.ContributionCalendar-day, [data-date][data-level]")
+    # GitHub currently puts each human-readable count in a sibling <tool-tip>
+    # instead of on the day cell itself. Keep aria/title parsing as fallback.
+    labels = {tip.get("for"): tip.get_text(" ", strip=True) for tip in soup.select("tool-tip[for]")}
     days = []
     for cell in cells:
         day = cell.get("data-date")
@@ -38,7 +41,7 @@ def main() -> int:
             date.fromisoformat(day)
         except ValueError:
             continue
-        label = cell.get("aria-label", "")
+        label = " ".join((cell.get("aria-label", ""), labels.get(cell.get("id"), "")))
         title = cell.get("title", "")
         text = " ".join((label, title, cell.get_text(" ", strip=True)))
         match = re.search(r"([\d,]+)\s+contributions?", text, re.I)

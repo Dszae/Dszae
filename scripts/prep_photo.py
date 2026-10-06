@@ -32,7 +32,7 @@ def main() -> int:
         try:
             from rembg import remove
             image = remove(image).convert("RGBA")
-        except (ImportError, ModuleNotFoundError) as exc:
+        except Exception as exc:
             print(f"Background removal unavailable ({exc}); continuing with the supplied image.", file=sys.stderr)
 
         background = Image.new("RGBA", image.size, (255, 255, 255, 255))
