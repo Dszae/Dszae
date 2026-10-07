@@ -1,34 +1,21 @@
-<div align="center">
+# 💫 About Me:
+### 📡 Current Directives & System Status<br><br>- 🔭 **I’m currently working on:** Enterprise-level Next.js architectures, real-time automated web scrapers (like Sportivo), and IoT-based biopotential sensor networks.<br>- 🤝 **I’m looking to collaborate on:** Open-source AI/ML models, scalable full-stack web platforms, and embedded hardware (ESP32/Arduino) integrations.<br>- 🆘 **I’m looking for help with:** Advanced cloud infrastructure scaling, distributed systems optimization, and training custom LLM models.<br>- 🌱 **I’m currently learning:** Advanced engineering mathematics (Laplace, Green's theorem), dynamic memory management in C++, and neural network optimization.<br>- 💬 **Ask me about:** C/C++ architecture, Next.js SEO & crawler optimization, PCB design, and motion graphics compositing in After Effects.<br>- ⚡ **Fun fact:** I can seamlessly context-switch from debugging low-level C++ memory leaks to rendering high-fidelity motion graphics without dropping a frame.
 
-<h1>Dipesh Sapkota</h1>
-<p><code>computer-engineering-student@thapathali:~$ whoami</code></p>
 
-<img src="dipesh-ascii.svg" alt="Monochrome terminal ASCII portrait of Dipesh Sapkota" width="560" />
+## 🌐 Socials:
+[![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://facebook.com/dsz.ae) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/dsz.ae) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/dszae) [![TikTok](https://img.shields.io/badge/TikTok-%23000000.svg?logo=TikTok&logoColor=white)](https://tiktok.com/@dsz.ae) [![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/dszae) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:dsz.ae18@gmail.com) 
 
-<img src="info-card.svg" alt="Terminal profile card with Dipesh's role, focus, creative interests, stack, portfolio, and GitHub" width="720" />
+# 💻 Tech Stack:
+![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![LaTeX](https://img.shields.io/badge/latex-%23008080.svg?style=for-the-badge&logo=latex&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white) ![Bash Script](https://img.shields.io/badge/bash_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white) ![Windows Terminal](https://img.shields.io/badge/Windows%20Terminal-%234D4D4D.svg?style=for-the-badge&logo=windows-terminal&logoColor=white) ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white) ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white) ![Electron.js](https://img.shields.io/badge/Electron-191970?style=for-the-badge&logo=Electron&logoColor=white) ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi) ![Anaconda](https://img.shields.io/badge/Anaconda-%2344A833.svg?style=for-the-badge&logo=anaconda&logoColor=white) ![OpenCV](https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white) ![Streamlit](https://img.shields.io/badge/Streamlit-%23FE4B4B.svg?style=for-the-badge&logo=streamlit&logoColor=white) ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![Socket.io](https://img.shields.io/badge/Socket.io-black?style=for-the-badge&logo=socket.io&badgeColor=010101) ![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![nVIDIA](https://img.shields.io/badge/cuda-000000.svg?style=for-the-badge&logo=nVIDIA&logoColor=green) ![OpenGL](https://img.shields.io/badge/OpenGL-%23FFFFFF.svg?style=for-the-badge&logo=opengl) ![WebGL](https://img.shields.io/badge/WebGL-990000?logo=webgl&logoColor=white&style=for-the-badge) ![Three js](https://img.shields.io/badge/threejs-black?style=for-the-badge&logo=three.js&logoColor=white) ![Badge Name](https://img.shields.io/badge/tRPC-%232596BE.svg?style=for-the-badge&logo=tRPC&logoColor=white) ![Adobe](https://img.shields.io/badge/adobe-%23FF0000.svg?style=for-the-badge&logo=adobe&logoColor=white) ![Adobe Acrobat Reader](https://img.shields.io/badge/Adobe%20Acrobat%20Reader-EC1C24.svg?style=for-the-badge&logo=Adobe%20Acrobat%20Reader&logoColor=white) ![Adobe After Effects](https://img.shields.io/badge/Adobe%20After%20Effects-9999FF.svg?style=for-the-badge&logo=Adobe%20After%20Effects&logoColor=white) ![Adobe Audition](https://img.shields.io/badge/Adobe%20Audition-9999FF.svg?style=for-the-badge&logo=Adobe%20Audition&logoColor=white) ![Adobe Creative Cloud](https://img.shields.io/badge/Adobe%20Creative%20Cloud-DA1F26.svg?style=for-the-badge&logo=Adobe%20Creative%20Cloud&logoColor=white) ![Adobe Illustrator](https://img.shields.io/badge/adobe%20illustrator-%23FF9A00.svg?style=for-the-badge&logo=adobe%20illustrator&logoColor=white) ![Adobe Photoshop](https://img.shields.io/badge/adobe%20photoshop-%2331A8FF.svg?style=for-the-badge&logo=adobe%20photoshop&logoColor=white) ![Adobe Premiere Pro](https://img.shields.io/badge/Adobe%20Premiere%20Pro-9999FF.svg?style=for-the-badge&logo=Adobe%20Premiere%20Pro&logoColor=white) ![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black) ![mlflow](https://img.shields.io/badge/mlflow-%23d9ead3.svg?style=for-the-badge&logo=numpy&logoColor=blue) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) ![Plotly](https://img.shields.io/badge/Plotly-%233F4F75.svg?style=for-the-badge&logo=plotly&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white) ![Scipy](https://img.shields.io/badge/SciPy-%230C55A5.svg?style=for-the-badge&logo=scipy&logoColor=%white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)
+# 📊 GitHub Stats:
+![](https://github-readme-stats.shion.dev/api?username=dszae&theme=dark&hide_border=false&include_all_commits=false&count_private=false)<br/>
+![](https://streak-stats.demolab.com/?user=dszae&theme=dark&hide_border=false)<br/>
+![](https://github-readme-stats.shion.dev/api/top-langs/?username=dszae&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
 
-<p><a href="https://www.dipeshsapkota7.com.np/">Portfolio</a> · <a href="https://github.com/Dszae">GitHub</a> · <a href="https://linkedin.com/in/dszae">LinkedIn</a></p>
+## 🏆 GitHub Trophies
+![](https://github-profile-trophy.vercel.app/?username=dszae&theme=radical&no-frame=false&no-bg=true&margin-w=4)
 
-</div>
+---
+[![](https://komarev.com/ghpvc/?username=dszae&icon=0&color=0)](https://visitcount.itsvg.in)
 
-<details>
-<summary>About this profile</summary>
-
-Computer Engineering student at Thapathali Campus, Institute of Engineering (IOE), Nepal. I enjoy programming, web development, video editing, motion graphics, and creative technology.
-
-**Tools:** C, C++, Python, JavaScript, React, PHP, Tailwind CSS, Vite · Premiere Pro, After Effects, DaVinci Resolve, Figma, Photoshop · Proteus and circuit analysis
-
-**Selected projects:** [Sportivo](https://sportivo.dipeshsapkota7.com.np/) · [IOE Admission Hub](https://ioe-admission.dipeshsapkota7.com.np/) · [Git Visualizer](https://git-visualizer.dipeshsapkota7.com.np/)
-
-**Elsewhere:** [Instagram](https://instagram.com/dsz.ae) · [Facebook](https://facebook.com/dsz.ae) · [TikTok](https://tiktok.com/@dsz.ae) · [Email](mailto:dsz.ae18@gmail.com)
-
-</details>
-
-<div align="center">
-
-<h3><code>git log --all --oneline --graph -- contributions</code></h3>
-<img src="contrib-heatmap.svg" alt="GitHub contribution calendar heatmap for Dszae" width="760" />
-
-</div>
-
-<!-- Profile art is generated by .github/workflows/update-profile-art.yml. -->
+<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
