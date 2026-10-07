@@ -1,11 +1,13 @@
-👋 Hi, I'm Dipesh Sapkota
-💻 Computer Engineering Student | 🤖 AI/ML Enthusiast | 🎬 Video Editor & Motion Graphics Designer
+# 👋 Hi, I'm Dipesh Sapkota
 
-I'm Dipesh Sapkota, a Computer Engineering student at Institute of Engineering (IOE), Thapathali Campus, Nepal.
+### 💻 Computer Engineering Student | 🤖 AI/ML Enthusiast | 🎬 Video Editor & Motion Graphics Designer
 
-I enjoy combining technology and creativity — from building software and experimenting with AI/ML to creating videos, graphics, and motion designs.
+I'm **Dipesh Sapkota**, a Computer Engineering student at **Institute of Engineering (IOE), Thapathali Campus, Nepal**.
 
-I'm continuously learning, building projects, and exploring new technologies that help me become a better engineer and creator.
+I enjoy combining **technology and creativity** — from building software and exploring AI/ML to creating videos, graphics, and motion designs.
+
+I'm continuously learning, building projects, and exploring new technologies to grow as both an engineer and a creative technologist.
+
 
 
 ## 🌐 Socials:
