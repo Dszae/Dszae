@@ -1,5 +1,11 @@
-# 💫 About Me:
-### 📡 Current Directives & System Status<br><br>- 🔭 **I’m currently working on:** Enterprise-level Next.js architectures, real-time automated web scrapers (like Sportivo), and IoT-based biopotential sensor networks.<br>- 🤝 **I’m looking to collaborate on:** Open-source AI/ML models, scalable full-stack web platforms, and embedded hardware (ESP32/Arduino) integrations.<br>- 🆘 **I’m looking for help with:** Advanced cloud infrastructure scaling, distributed systems optimization, and training custom LLM models.<br>- 🌱 **I’m currently learning:** Advanced engineering mathematics (Laplace, Green's theorem), dynamic memory management in C++, and neural network optimization.<br>- 💬 **Ask me about:** C/C++ architecture, Next.js SEO & crawler optimization, PCB design, and motion graphics compositing in After Effects.<br>- ⚡ **Fun fact:** I can seamlessly context-switch from debugging low-level C++ memory leaks to rendering high-fidelity motion graphics without dropping a frame.
+👋 Hi, I'm Dipesh Sapkota
+💻 Computer Engineering Student | 🤖 AI/ML Enthusiast | 🎬 Video Editor & Motion Graphics Designer
+
+I'm Dipesh Sapkota, a Computer Engineering student at Institute of Engineering (IOE), Thapathali Campus, Nepal.
+
+I enjoy combining technology and creativity — from building software and experimenting with AI/ML to creating videos, graphics, and motion designs.
+
+I'm continuously learning, building projects, and exploring new technologies that help me become a better engineer and creator.
 
 
 ## 🌐 Socials:
