@@ -1,29 +1,252 @@
-# 👋 Hi, I'm Dipesh Sapkota
+<!--
+  Dipesh Sapkota — GitHub Profile README
+  Repository: https://github.com/Dszae/Dszae
+-->
 
-### 💻 Computer Engineering Student | 🤖 AI/ML Enthusiast | 🎬 Video Editor & Motion Graphics Designer
+<div align="center">
 
-I'm **Dipesh Sapkota**, a Computer Engineering student at **Institute of Engineering (IOE), Thapathali Campus, Nepal**.
+# Dipesh Sapkota
 
-I enjoy combining **technology and creativity** — from building software and exploring AI/ML to creating videos, graphics, and motion designs.
+### Computer Engineering Student · Developer · Creative Technologist
 
-I'm continuously learning, building projects, and exploring new technologies to grow as both an engineer and a creative technologist.
+<a href="https://www.dipeshsapkota7.com.np/">
+  <img src="https://img.shields.io/badge/Portfolio-Visit%20Website-111827?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio"/>
+</a>
+<a href="https://linkedin.com/in/dszae">
+  <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+</a>
+<a href="https://github.com/Dszae">
+  <img src="https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+</a>
+<a href="mailto:dsz.ae18@gmail.com">
+  <img src="https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
+</a>
 
+<br/>
 
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=19&pause=1100&color=36BC98&center=true&vCenter=true&width=650&lines=Building+useful+things+with+code.;Exploring+AI%2FML+and+intelligent+systems.;Engineering+meets+creative+media.;Learning%2C+building%2C+and+iterating." alt="Animated introduction"/>
 
-## 🌐 Socials:
-[![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://facebook.com/dsz.ae) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/dsz.ae) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/dszae) [![TikTok](https://img.shields.io/badge/TikTok-%23000000.svg?logo=TikTok&logoColor=white)](https://tiktok.com/@dsz.ae) [![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/dszae) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:dsz.ae18@gmail.com) 
+<br/>
 
-# 💻 Tech Stack:
-![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![LaTeX](https://img.shields.io/badge/latex-%23008080.svg?style=for-the-badge&logo=latex&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white) ![Bash Script](https://img.shields.io/badge/bash_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white) ![Windows Terminal](https://img.shields.io/badge/Windows%20Terminal-%234D4D4D.svg?style=for-the-badge&logo=windows-terminal&logoColor=white) ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white) ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white) ![Electron.js](https://img.shields.io/badge/Electron-191970?style=for-the-badge&logo=Electron&logoColor=white) ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi) ![Anaconda](https://img.shields.io/badge/Anaconda-%2344A833.svg?style=for-the-badge&logo=anaconda&logoColor=white) ![OpenCV](https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white) ![Streamlit](https://img.shields.io/badge/Streamlit-%23FE4B4B.svg?style=for-the-badge&logo=streamlit&logoColor=white) ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![Socket.io](https://img.shields.io/badge/Socket.io-black?style=for-the-badge&logo=socket.io&badgeColor=010101) ![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![nVIDIA](https://img.shields.io/badge/cuda-000000.svg?style=for-the-badge&logo=nVIDIA&logoColor=green) ![OpenGL](https://img.shields.io/badge/OpenGL-%23FFFFFF.svg?style=for-the-badge&logo=opengl) ![WebGL](https://img.shields.io/badge/WebGL-990000?logo=webgl&logoColor=white&style=for-the-badge) ![Three js](https://img.shields.io/badge/threejs-black?style=for-the-badge&logo=three.js&logoColor=white) ![Badge Name](https://img.shields.io/badge/tRPC-%232596BE.svg?style=for-the-badge&logo=tRPC&logoColor=white) ![Adobe](https://img.shields.io/badge/adobe-%23FF0000.svg?style=for-the-badge&logo=adobe&logoColor=white) ![Adobe Acrobat Reader](https://img.shields.io/badge/Adobe%20Acrobat%20Reader-EC1C24.svg?style=for-the-badge&logo=Adobe%20Acrobat%20Reader&logoColor=white) ![Adobe After Effects](https://img.shields.io/badge/Adobe%20After%20Effects-9999FF.svg?style=for-the-badge&logo=Adobe%20After%20Effects&logoColor=white) ![Adobe Audition](https://img.shields.io/badge/Adobe%20Audition-9999FF.svg?style=for-the-badge&logo=Adobe%20Audition&logoColor=white) ![Adobe Creative Cloud](https://img.shields.io/badge/Adobe%20Creative%20Cloud-DA1F26.svg?style=for-the-badge&logo=Adobe%20Creative%20Cloud&logoColor=white) ![Adobe Illustrator](https://img.shields.io/badge/adobe%20illustrator-%23FF9A00.svg?style=for-the-badge&logo=adobe%20illustrator&logoColor=white) ![Adobe Photoshop](https://img.shields.io/badge/adobe%20photoshop-%2331A8FF.svg?style=for-the-badge&logo=adobe%20photoshop&logoColor=white) ![Adobe Premiere Pro](https://img.shields.io/badge/Adobe%20Premiere%20Pro-9999FF.svg?style=for-the-badge&logo=Adobe%20Premiere%20Pro&logoColor=white) ![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black) ![mlflow](https://img.shields.io/badge/mlflow-%23d9ead3.svg?style=for-the-badge&logo=numpy&logoColor=blue) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) ![Plotly](https://img.shields.io/badge/Plotly-%233F4F75.svg?style=for-the-badge&logo=plotly&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white) ![Scipy](https://img.shields.io/badge/SciPy-%230C55A5.svg?style=for-the-badge&logo=scipy&logoColor=%white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)
-# 📊 GitHub Stats:
-![](https://github-readme-stats.shion.dev/api?username=dszae&theme=dark&hide_border=false&include_all_commits=false&count_private=false)<br/>
-![](https://streak-stats.demolab.com/?user=dszae&theme=dark&hide_border=false)<br/>
-![](https://github-readme-stats.shion.dev/api/top-langs/?username=dszae&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
+<img src="https://komarev.com/ghpvc/?username=dszae&label=PROFILE+VIEWS&color=36BC98&style=flat-square" alt="Profile views"/>
+<img src="https://img.shields.io/github/followers/dszae?label=FOLLOWERS&style=flat-square&color=36BC98" alt="GitHub followers"/>
+<img src="https://img.shields.io/github/stars/dszae?label=TOTAL%20STARS&style=flat-square&color=36BC98" alt="GitHub stars"/>
 
-## 🏆 GitHub Trophies
-![](https://github-profile-trophy.vercel.app/?username=dszae&theme=radical&no-frame=false&no-bg=true&margin-w=4)
+</div>
 
 ---
-[![](https://komarev.com/ghpvc/?username=dszae&icon=0&color=0)](https://visitcount.itsvg.in)
 
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+## About Me
+
+I'm **Dipesh Sapkota**, a Computer Engineering student at **IOE, Thapathali Campus, Nepal**, interested in building technology that is useful, thoughtfully designed, and enjoyable to use.
+
+I work across software development and creative media, combining engineering fundamentals with visual storytelling.
+
+- 💻 Building software, web applications, and developer tools.
+- 🤖 Exploring Python, artificial intelligence, and machine learning.
+- 🎬 Creating videos, motion graphics, and visual experiences.
+- 🧪 Learning by building projects, experimenting, and solving problems.
+- 🌱 Continuously improving my engineering and creative skills.
+
+> My goal is to bridge the gap between how technology works and how people experience it.
+
+## What I'm Exploring
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 💻 Software & Engineering
+
+Building practical applications and tools with a focus on usability, performance, and maintainable code.
+
+**Interests:** Web development, programming fundamentals, developer tools, and software architecture.
+
+</td>
+<td width="50%" valign="top">
+
+### 🤖 AI & Machine Learning
+
+Exploring how data, algorithms, and intelligent systems can solve meaningful problems.
+
+**Interests:** Python, data analysis, computer vision, and machine learning fundamentals.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🎨 Creative Technology
+
+Combining technical problem-solving with visual design, video editing, and motion graphics.
+
+**Tools:** After Effects, Premiere Pro, Photoshop, Illustrator, and DaVinci Resolve.
+
+</td>
+<td width="50%" valign="top">
+
+### 🛠️ Building & Experimenting
+
+Turning ideas into working prototypes, documenting what I learn, and improving projects through iteration.
+
+**Focus:** Practical projects, open-source development, and experimentation.
+
+</td>
+</tr>
+</table>
+
+## Tech Stack
+
+*Technologies and tools I use or am exploring.*
+
+### Languages
+
+<p>
+<img src="https://skillicons.dev/icons?i=c,cpp,python,js,ts,html,css,php,bash,latex&theme=dark" alt="Programming languages"/>
+</p>
+
+### Web Development
+
+<p>
+<img src="https://skillicons.dev/icons?i=react,nextjs,vite,tailwind,bootstrap,nodejs,fastapi,threejs,electron&theme=dark" alt="Web development technologies"/>
+</p>
+
+### AI, Data & Computer Vision
+
+<p>
+<img src="https://skillicons.dev/icons?i=numpy,pytorch,tensorflow,opencv&theme=dark" alt="AI and computer vision technologies"/>
+</p>
+
+<p>
+<img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" alt="NumPy"/>
+<img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="Pandas"/>
+<img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" alt="scikit-learn"/>
+<img src="https://img.shields.io/badge/Matplotlib-11557C?style=flat-square&logo=plotly&logoColor=white" alt="Matplotlib"/>
+<img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white" alt="Streamlit"/>
+<img src="https://img.shields.io/badge/SciPy-0C55A5?style=flat-square&logo=scipy&logoColor=white" alt="SciPy"/>
+</p>
+
+### Tools & Platforms
+
+<p>
+<img src="https://skillicons.dev/icons?i=git,github,vercel,cloudflare,linux,vscode,windows,anaconda&theme=dark" alt="Development tools and platforms"/>
+</p>
+
+### Creative Software
+
+<p>
+<img src="https://img.shields.io/badge/After%20Effects-9999FF?style=flat-square&logo=adobeaftereffects&logoColor=white" alt="Adobe After Effects"/>
+<img src="https://img.shields.io/badge/Premiere%20Pro-9999FF?style=flat-square&logo=adobepremierepro&logoColor=white" alt="Adobe Premiere Pro"/>
+<img src="https://img.shields.io/badge/Photoshop-31A8FF?style=flat-square&logo=adobephotoshop&logoColor=white" alt="Adobe Photoshop"/>
+<img src="https://img.shields.io/badge/Illustrator-FF9A00?style=flat-square&logo=adobeillustrator&logoColor=white" alt="Adobe Illustrator"/>
+<img src="https://img.shields.io/badge/DaVinci%20Resolve-233A51?style=flat-square&logo=davinciresolve&logoColor=white" alt="DaVinci Resolve"/>
+</p>
+
+## Featured Projects
+
+A selection of projects that reflect my interests in engineering, developer tools, and creative technology.
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 🔍 Git Visualizer
+
+An interactive project for exploring Git concepts and understanding version-control workflows visually.
+
+**Focus:** Developer tools · Git · Interactive learning
+
+<a href="https://github.com/dszae/git-visualizer">Source Code</a> · <a href="https://git-visualizer.dipeshsapkota7.com.np/">Live Demo</a>
+
+</td>
+<td width="50%" valign="top">
+
+### 🎓 IOE Admission Hub
+
+An educational platform designed to help students explore IOE entrance and admission information.
+
+**Focus:** Education · Web development · Student resources
+
+<a href="https://github.com/dszae/ioe-admission-guide">Source Code</a> · <a href="https://ioe-admission.dipeshsapkota7.com.np/">Live Demo</a>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🎵 BeatMarker
+
+An Adobe After Effects CEP panel that analyzes audio rhythm and places beat markers on an audio layer or composition timeline.
+
+**Focus:** Creative automation · Audio analysis · After Effects
+
+<a href="https://github.com/Dszae/beatMarker">Source Code</a>
+
+</td>
+<td width="50%" valign="top">
+
+### ⚽ Sportivo
+
+A sports-focused web project exploring match discovery, fixtures, and a streamlined viewing experience.
+
+**Focus:** Sports · Web development · User experience
+
+<a href="https://github.com/dszae">Explore Repositories</a> · <a href="https://sportivo.dipeshsapkota7.com.np/">Live Demo</a>
+
+</td>
+</tr>
+</table>
+
+**Explore more:** [All repositories →](https://github.com/Dszae?tab=repositories) · [Personal portfolio →](https://www.dipeshsapkota7.com.np/)
+
+## GitHub Statistics
+
+<div align="center">
+
+<a href="https://github.com/dszae">
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=dszae&show_icons=true&hide_border=true&theme=transparent&title_color=36BC98&icon_color=36BC98&rank_icon=github" alt="GitHub statistics"/>
+</a>
+<a href="https://github.com/dszae">
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=dszae&layout=compact&hide_border=true&theme=transparent&title_color=36BC98" alt="Most used languages"/>
+</a>
+
+<br/>
+
+<img width="70%" src="https://streak-stats.demolab.com?user=dszae&theme=transparent&hide_border=true&ring=36BC98&fire=36BC98&currStreakLabel=36BC98" alt="GitHub contribution streak"/>
+
+</div>
+
+## Contribution Graph
+
+<div align="center">
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=dszae&bg_color=00000000&color=36BC98&line=36BC98&point=FFFFFF&area=true&hide_border=true" width="100%" alt="GitHub contribution activity graph"/>
+
+</div>
+
+## Contribution Snake 🐍
+
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/Dszae/Dszae/output/github-contribution-grid-snake-dark.svg" alt="Animated snake eating GitHub contribution squares" width="100%"/>
+
+</div>
+
+## Let's Connect
+
+I'm always interested in learning from other developers, exploring interesting ideas, and building useful things.
+
+<div align="center">
+
+<a href="https://www.dipeshsapkota7.com.np/">Portfolio</a> ·
+<a href="https://linkedin.com/in/dszae">LinkedIn</a> ·
+<a href="https://github.com/Dszae">GitHub</a> ·
+<a href="https://dev.to/dszae">Dev.to</a> ·
+<a href="https://hashnode.com/@dszae">Hashnode</a> ·
+<a href="mailto:dsz.ae18@gmail.com">Email</a>
+
+<br/><br/>
+
+*Building at the intersection of engineering and creativity.*
+
+</div>
