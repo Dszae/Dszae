@@ -192,7 +192,7 @@ A sports-focused web project exploring match discovery, fixtures, and a streamli
 
 **Focus:** Sports · Web projects
 
-[Explore repositories →](https://github.com/Dszae?tab=repositories)
+[Repository →](https://github.com/Dszae/sportivo)
 
 [Live Demo →](https://sportivo.dipeshsapkota7.com.np/)
 
