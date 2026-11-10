@@ -8,7 +8,7 @@
 
 <p>
 <a href="https://www.dipeshsapkota7.com.np/"><img src="https://img.shields.io/badge/Portfolio-Visit-36BC98?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio"/></a>
-<a href="https://linkedin.com/in/dszae"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+<a href="https://linkedin.com/in/dipeshsapkota7"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
 <a href="https://github.com/Dszae"><img src="https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
 <a href="mailto:dsz.ae18@gmail.com"><img src="https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
 </p>
@@ -235,7 +235,7 @@ I'm always happy to connect with people interested in technology, AI, creative w
 <div align="center">
 
 <a href="https://www.dipeshsapkota7.com.np/">Portfolio</a> ·
-<a href="https://linkedin.com/in/dszae">LinkedIn</a> ·
+<a href="https://linkedin.com/in/dipeshsapkota7">LinkedIn</a> ·
 <a href="https://github.com/Dszae">GitHub</a> ·
 <a href="https://dev.to/dszae">Dev.to</a> ·
 <a href="https://hashnode.com/@dszae">Hashnode</a> ·
