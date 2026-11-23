@@ -1,5 +1,4 @@
-
-name: Generate Contribution Snake
+name: Generate Contribution Snake and Refresh Stats
 
 on:
   schedule:
@@ -31,3 +30,26 @@ jobs:
           build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Purge GitHub Camo Cache for Profile Assets
+        run: |
+          echo "Discovering and purging Camo cached assets for Dszae profile..."
+          node -e '
+            fetch("https://github.com/Dszae")
+              .then(r => r.text())
+              .then(async html => {
+                const urls = [...new Set(html.match(/https:\/\/camo\.githubusercontent\.com\/[a-f0-9]+\/[a-f0-9]+/g) || [])];
+                console.log(`Found ${urls.length} Camo assets on profile.`);
+                for (const url of urls) {
+                  try {
+                    const res = await fetch(url, { method: "PURGE" });
+                    console.log(`Purged [${res.status}]: ${url.slice(0, 60)}...`);
+                  } catch (err) {
+                    console.log(`Purge notice on ${url.slice(0, 60)}: ${err.message}`);
+                  }
+                }
+              })
+              .catch(err => {
+                console.error("Purge discovery error:", err.message);
+              });
+          '
