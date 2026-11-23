@@ -187,7 +187,7 @@ Real-time sports match discovery and schedule aggregator with dynamic stream pro
 <div align="center">
 
 <a href="https://github.com/Dszae">
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=dszae&show_icons=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=36BC98&icon_color=36BC98&text_color=c9d1d9&cache_seconds=1800" alt="GitHub statistics"/>
+<img height="165" src="https://github-readme-stats.vercel.app/api?username=dszae&show_icons=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=36BC98&icon_color=36BC98&text_color=c9d1d9&cache_seconds=1800&show=reviews,prs_merged" alt="GitHub statistics"/>
 </a>
 
 <a href="https://github.com/Dszae">
