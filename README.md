@@ -15,6 +15,11 @@
 
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=17&pause=1400&color=36BC98&center=true&vCenter=true&width=650&lines=Computer+Engineering+Student+at+IOE+Thapathali+Campus.;Exploring+Artificial+Intelligence+and+Machine+Learning.;Working+with+Embedded+Systems+and+Hardware+Simulation.;Motion+Graphics+Designer+and+Video+Editor." alt="Terminal introduction banner"/>
 
+<p>
+<strong>If one of these projects helps you, consider starring its repository.</strong><br/>
+It helps others discover the work.
+</p>
+
 <br/>
 
 <img src="https://komarev.com/ghpvc/?username=dszae&label=PROFILE%20VIEWS&color=36BC98&style=flat-square" alt="Profile views"/>
