@@ -25,11 +25,12 @@ def main() -> int:
         return 1
 
     last = max(days)
-    # Align the 53-column display to Sunday and include the trailing days of the year view.
-    end = last + timedelta(days=(6 - last.weekday()) % 7)
-    start = end - timedelta(days=7 * 52 + 6)
-    start -= timedelta(days=(start.weekday() + 1) % 7)
-    total_weeks = ((end - start).days + 1) // 7
+    # Weeks run Sunday to Saturday, as on GitHub. End on the Saturday of the latest
+    # day's week, so that day is always drawn (also when it is a Sunday, which used
+    # to fall one day past the grid), and show the 53 weeks up to it.
+    total_weeks = 53
+    end = last + timedelta(days=(5 - last.weekday()) % 7)
+    start = end - timedelta(days=7 * total_weeks - 1)
     cell, gap, left, top = 11, 3, 42, 45
     width = left + total_weeks * (cell + gap) + 12
     height = top + 7 * (cell + gap) + 36
@@ -51,7 +52,7 @@ def main() -> int:
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">
 <title id="title">GitHub contribution calendar for Dszae</title><desc id="desc">{escape(summary)}. Each square represents a day.</desc>
 <rect x=".5" y=".5" width="{width-1}" height="{height-1}" rx="8" fill="#0d1117" stroke="#30363d"/>
-<text x="12" y="{top+10}" fill="#7d8590" font-family="sans-serif" font-size="10">Mon</text><text x="12" y="{top+4*(cell+gap)+10}" fill="#7d8590" font-family="sans-serif" font-size="10">Fri</text>
+<text x="12" y="{top+1*(cell+gap)+10}" fill="#7d8590" font-family="sans-serif" font-size="10">Mon</text><text x="12" y="{top+5*(cell+gap)+10}" fill="#7d8590" font-family="sans-serif" font-size="10">Fri</text>
 {''.join(nodes)}
 <text x="{left}" y="{height-11}" fill="#8b949e" font-family="sans-serif" font-size="11">{escape(summary)}</text>
 <g transform="translate({width-145},{height-20})">{''.join(f'<rect x="{i*14}" y="0" width="10" height="10" rx="2" fill="{color}"/>' for i, color in enumerate(PALETTE))}<text x="75" y="9" fill="#7d8590" font-family="sans-serif" font-size="10">Less</text><text x="137" y="9" fill="#7d8590" font-family="sans-serif" font-size="10">More</text></g>
