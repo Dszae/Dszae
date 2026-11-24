@@ -1,6 +1,5 @@
-# Keep the original portrait on your machine; only publish the generated ASCII art.
-/source-photo.jpg
-/source-prepped.png
+# Keep source photos on your machine; only the generated ASCII art (assets/portrait-*.txt) is published.
+/source-photo.*
 __pycache__/
 *.py[cod]
 dist/
