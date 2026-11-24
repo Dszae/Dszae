@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg"/>
-  <img src="assets/hero-light.svg" width="100%" alt="Dipesh Sapkota (Dszae). Computer Engineering Student, AI/ML Enthusiast and Motion Designer at IOE Thapathali Campus, Tribhuvan University, Kathmandu, Nepal."/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Dszae/Dszae/output/card-dark.svg"/>
+  <img src="https://raw.githubusercontent.com/Dszae/Dszae/output/card-light.svg" width="100%" alt="Dipesh Sapkota (Dszae): ASCII portrait beside a terminal-style profile. Computer Engineering Student, AI/ML Enthusiast and Motion Designer at IOE Thapathali Campus, Kathmandu, Nepal, with contact details and live GitHub stats."/>
 </picture>
 
 <p>

@@ -1,8 +1,8 @@
 """Shared palette, fonts, text metrics and SVG helpers for the profile images.
 
-The colours follow dipeshsapkota7.com.np: a warm near-black (dark) or cream (light)
-page, emerald accents, and the amber hexagon motif. Chart colours follow a
-validated categorical palette; each language keeps its colour whatever its rank.
+The colours follow dipeshsapkota7.com.np: emerald accents with amber highlights on a
+near-black (dark) or white (light) card. Chart colours follow a validated categorical
+palette; each language keeps its colour whatever its rank.
 """
 
 from __future__ import annotations
@@ -24,8 +24,6 @@ MONO = "'DS Geist Mono', 'Geist Mono', ui-monospace, SFMono-Regular, Consolas, '
 @dataclass(frozen=True)
 class Theme:
     name: str
-    page_top: str
-    page_bottom: str
     surface: str
     border: str
     text_primary: str
@@ -33,11 +31,8 @@ class Theme:
     text_muted: str
     grid: str
     accent: str
-    accent_glow: str
-    amber_rgb: str
+    accent_text: str
     amber_mark: str
-    glow_opacity: float
-    hex_scale: float
     other: str
     languages: dict[str, str] = field(default_factory=dict)
     spare: tuple[str, ...] = ()
@@ -51,8 +46,6 @@ _DARK_SLOTS = ("#3987e5", "#d95926", "#199e70", "#c98500", "#d55181", "#0ca30c",
 
 DARK = Theme(
     name="dark",
-    page_top="#0b0908",
-    page_bottom="#050404",
     surface="#0e1217",
     border="#ffffff1a",
     text_primary="#f8fafc",
@@ -60,11 +53,8 @@ DARK = Theme(
     text_muted="#64748b",
     grid="#ffffff14",
     accent="#34d399",
-    accent_glow="#6ee7b7",
-    amber_rgb="226,178,118",
+    accent_text="#6ee7b7",
     amber_mark="#e2b276",
-    glow_opacity=0.22,
-    hex_scale=1.0,
     other="#5c5c57",
     languages=dict(zip(_LANGUAGE_SLOTS, _DARK_SLOTS)),
     spare=_DARK_SLOTS,
@@ -72,8 +62,6 @@ DARK = Theme(
 
 LIGHT = Theme(
     name="light",
-    page_top="#fcfaf6",
-    page_bottom="#f3efe6",
     surface="#ffffff",
     border="#0f172a1a",
     text_primary="#0f172a",
@@ -81,11 +69,8 @@ LIGHT = Theme(
     text_muted="#475569",
     grid="#0f172a14",
     accent="#059669",
-    accent_glow="#10b981",
-    amber_rgb="150,104,48",
-    amber_mark="#966830",
-    glow_opacity=0.12,
-    hex_scale=0.9,
+    accent_text="#047857",
+    amber_mark="#b45309",
     other="#a3a29c",
     languages=dict(zip(_LANGUAGE_SLOTS, _LIGHT_SLOTS)),
     spare=_LIGHT_SLOTS,
@@ -167,30 +152,3 @@ def ink_on(fill: str) -> str:
 
 def esc(text: object) -> str:
     return escape(str(text), {'"': "&quot;"})
-
-
-# Centres and opacities of the right-hand hexagon cluster in the portfolio background
-# (pointy-top cells, radius 29, on a 1440 x 900 canvas).
-_PORTFOLIO_HEXES = (
-    (855.4, 94, 0.020), (716.9, 142, 0.030), (827.7, 142, 0.040), (938.6, 142, 0.025),
-    (800.0, 190, 0.070), (855.4, 190, 0.050), (910.9, 190, 0.030),
-    (772.3, 238, 0.050), (827.7, 238, 0.090), (883.1, 238, 0.060), (938.6, 238, 0.040),
-    (689.1, 286, 0.020), (800.0, 286, 0.040), (855.4, 286, 0.070), (910.9, 286, 0.080),
-    (772.3, 334, 0.030), (883.1, 334, 0.050), (938.6, 334, 0.060), (966.3, 382, 0.030),
-)
-
-
-def hex_motif(theme: Theme, x: float, y: float, scale: float = 1.0, boost: float = 1.0) -> str:
-    """The portfolio's amber hexagon cluster, its top-left corner placed at (x, y)."""
-    r, half = 29.0, 25.1
-    min_x = min(cx for cx, _, _ in _PORTFOLIO_HEXES) - half
-    min_y = min(cy for _, cy, _ in _PORTFOLIO_HEXES) - r
-    parts = []
-    for cx, cy, alpha in _PORTFOLIO_HEXES:
-        pts = " ".join(
-            f"{x + (cx + dx * half - min_x) * scale:.1f},{y + (cy + dy * r - min_y) * scale:.1f}"
-            for dx, dy in ((0, -1), (1, -0.5), (1, 0.5), (0, 1), (-1, 0.5), (-1, -0.5))
-        )
-        opacity = min(1.0, alpha * boost * theme.hex_scale)
-        parts.append(f'<polygon points="{pts}" fill="rgb({theme.amber_rgb})" fill-opacity="{opacity:.3f}"/>')
-    return "".join(parts)

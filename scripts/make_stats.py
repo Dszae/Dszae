@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fetch GitHub activity for the profile and render stats-dark.svg / stats-light.svg.
+"""Fetch GitHub activity and render the stats cards and the terminal profile card.
 
 Runs in GitHub Actions every few hours, so the numbers are fresh without a
 third-party card service. Uses PROFILE_STATS_TOKEN when set (a read-only token
@@ -23,6 +23,7 @@ from dataclasses import asdict, dataclass
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
+import card
 from theme import MONO, SANS, THEMES, Theme, esc, font_faces, ink_on, language_colors, text_width
 
 LOGIN = "Dszae"
@@ -35,7 +36,11 @@ TOP_LANGUAGES = 5
 PROFILE_QUERY = """
 query($login: String!, $merged: String!, $reviewed: String!) {
   user(login: $login) {
+    id
     createdAt
+    followers { totalCount }
+    repositoriesContributedTo(first: 1, includeUserRepositories: false,
+      contributionTypes: [COMMIT, PULL_REQUEST, ISSUE, PULL_REQUEST_REVIEW, REPOSITORY]) { totalCount }
     contributionsCollection {
       totalCommitContributions
       contributionCalendar { totalContributions weeks { contributionDays { date contributionCount } } }
@@ -49,6 +54,7 @@ CALENDAR_QUERY = """
 query($login: String!, $from: DateTime!, $to: DateTime!) {
   user(login: $login) {
     contributionsCollection(from: $from, to: $to) {
+      totalCommitContributions
       contributionCalendar { weeks { contributionDays { date contributionCount } } }
     }
   }
@@ -61,6 +67,19 @@ query($login: String!, $cursor: String) {
       pageInfo { hasNextPage endCursor }
       nodes { name isFork stargazerCount languages(first: 25, orderBy: {field: SIZE, direction: DESC}) { edges { size node { name } } } }
     }
+  }
+}"""
+
+# Additions and deletions of the user's own commits on a repository's default branch.
+HISTORY_QUERY = """
+query($owner: String!, $name: String!, $author: ID!, $cursor: String) {
+  repository(owner: $owner, name: $name) {
+    defaultBranchRef { target { ... on Commit {
+      history(first: 100, after: $cursor, author: {id: $author}) {
+        pageInfo { hasNextPage endCursor }
+        nodes { additions deletions }
+      }
+    } } }
   }
 }"""
 
@@ -102,10 +121,12 @@ def fetch(token: str, today: date | None = None) -> dict:
     created = datetime.fromisoformat(user["createdAt"].replace("Z", "+00:00"))
     now = datetime.now(timezone.utc)
     history: dict[str, int] = {}
+    commits_all = 0
     start = created
     while start < now:
         end = min(start + timedelta(days=365), now)
         window = graphql(CALENDAR_QUERY, {"login": LOGIN, "from": start.isoformat(), "to": end.isoformat()}, token)
+        commits_all += window["user"]["contributionsCollection"]["totalCommitContributions"]
         for week in window["user"]["contributionsCollection"]["contributionCalendar"]["weeks"]:
             for day in week["contributionDays"]:
                 history[day["date"]] = day["contributionCount"]
@@ -123,11 +144,33 @@ def fetch(token: str, today: date | None = None) -> dict:
             break
         cursor = page["pageInfo"]["endCursor"]
 
+    added = deleted = 0
+    for repo in repos:
+        if repo["fork"]:
+            continue
+        cursor = None
+        while True:
+            data = graphql(HISTORY_QUERY, {"owner": LOGIN, "name": repo["name"], "author": user["id"], "cursor": cursor}, token)
+            branch = data["repository"]["defaultBranchRef"]
+            if not branch:
+                break                                   # empty repository
+            history_page = branch["target"]["history"]
+            added += sum(n["additions"] for n in history_page["nodes"])
+            deleted += sum(n["deletions"] for n in history_page["nodes"])
+            if not history_page["pageInfo"]["hasNextPage"]:
+                break
+            cursor = history_page["pageInfo"]["endCursor"]
+
     return {
         "login": LOGIN,
         "fetched_at": now.isoformat(timespec="seconds"),
         "contributions_year": year["contributionCalendar"]["totalContributions"],
         "commits_year": year["totalCommitContributions"],
+        "commits_all": commits_all,
+        "followers": user["followers"]["totalCount"],
+        "contributed_to": user["repositoriesContributedTo"]["totalCount"],
+        "loc_added": added,
+        "loc_deleted": deleted,
         "prs_merged": profile["merged"]["issueCount"],
         "prs_reviewed": profile["reviewed"]["issueCount"],
         "weeks": [[[d["date"], d["contributionCount"]] for d in w["contributionDays"]]
@@ -218,6 +261,11 @@ class Stats:
     weeks: list[tuple[date, int]]
     languages: list[tuple[str, float]]
     updated: date
+    commits_all: int = 0
+    followers: int = 0
+    contributed_to: int = 0
+    loc_added: int = 0
+    loc_deleted: int = 0
 
 
 def compute(raw: dict) -> Stats:
@@ -237,6 +285,11 @@ def compute(raw: dict) -> Stats:
         weeks=weeks,
         languages=language_shares(raw["repos"]),
         updated=datetime.fromisoformat(raw["fetched_at"]).date(),
+        commits_all=raw.get("commits_all", raw["commits_year"]),
+        followers=raw.get("followers", 0),
+        contributed_to=raw.get("contributed_to", 0),
+        loc_added=raw.get("loc_added", 0),
+        loc_deleted=raw.get("loc_deleted", 0),
     )
 
 
@@ -449,9 +502,11 @@ def main() -> int:
     args.out.mkdir(parents=True, exist_ok=True)
     for theme in THEMES:
         (args.out / f"stats-{theme.name}.svg").write_text(render(stats, theme), encoding="utf-8")
+        (args.out / f"card-{theme.name}.svg").write_text(card.render(stats, theme), encoding="utf-8")
     (args.out / "stats.json").write_text(json.dumps(to_json(stats), indent=2) + "\n", encoding="utf-8")
     print(f"Wrote stats cards to {args.out}: {stats.contributions_year:,} contributions, "
           f"{stats.commits_year:,} commits, {stats.prs_merged} PRs merged, {stats.stars} stars, "
+          f"{stats.followers} followers, {stats.loc_added - stats.loc_deleted:,} lines of code, "
           f"streak {stats.current.days} (longest {stats.longest.days})")
     return 0
 
