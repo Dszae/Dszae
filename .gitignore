@@ -3,3 +3,5 @@
 /source-prepped.png
 __pycache__/
 *.py[cod]
+dist/
+.pytest_cache/
