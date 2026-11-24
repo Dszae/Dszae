@@ -2,7 +2,7 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Dszae/Dszae/output/card-dark.svg"/>
-  <img src="https://raw.githubusercontent.com/Dszae/Dszae/output/card-light.svg" width="100%" alt="Dipesh Sapkota (Dszae): ASCII portrait beside a terminal-style profile. Computer Engineering Student, AI/ML Enthusiast and Motion Designer at IOE Thapathali Campus, Kathmandu, Nepal, with contact details and live GitHub stats."/>
+  <img src="https://raw.githubusercontent.com/Dszae/Dszae/output/card-light.svg" width="100%" alt="Dipesh Sapkota (Dszae): a portrait drawn in flowing source code beside a profile written as a TypeScript object. Computer Engineering Student, AI/ML Enthusiast and Motion Designer at IOE Thapathali Campus, Kathmandu, Nepal, with live GitHub stats."/>
 </picture>
 
 <p>
