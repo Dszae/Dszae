@@ -1,231 +1,165 @@
 <div align="center">
 
-# Dipesh Sapkota
-
-### Computer Engineering Student · AI/ML Enthusiast · Motion Designer
-
-*IOE Thapathali Campus, Tribhuvan University · Kathmandu, Nepal*
-
-<p>
-<a href="https://www.dipeshsapkota7.com.np/"><img src="https://img.shields.io/badge/Portfolio-dipeshsapkota7.com.np-36BC98?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio"/></a>
-<a href="https://linkedin.com/in/dipeshsapkota7"><img src="https://img.shields.io/badge/LinkedIn-Dipesh%20Sapkota-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-<a href="https://github.com/Dszae"><img src="https://img.shields.io/badge/GitHub-Dszae-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
-<a href="mailto:contact@dipeshsapkota7.com.np"><img src="https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
-</p>
-
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=17&pause=1400&color=36BC98&center=true&vCenter=true&width=650&lines=Computer+Engineering+Student+at+IOE+Thapathali+Campus.;Exploring+Artificial+Intelligence+and+Machine+Learning.;Working+with+Embedded+Systems+and+Hardware+Simulation.;Motion+Graphics+Designer+and+Video+Editor." alt="Terminal introduction banner"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg"/>
+  <img src="assets/hero-light.svg" width="100%" alt="Dipesh Sapkota. Computer Engineering Student, AI/ML Enthusiast and Motion Designer at IOE Thapathali Campus, Tribhuvan University, Kathmandu, Nepal."/>
+</picture>
 
 <p>
-<strong>If one of these projects helps you, consider starring its repository.</strong><br/>
-It helps others discover the work.
+<a href="https://www.dipeshsapkota7.com.np/"><img src="https://img.shields.io/badge/Portfolio-dipeshsapkota7.com.np-047857?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio"/></a>
+<a href="https://linkedin.com/in/dipeshsapkota7"><img src="https://img.shields.io/badge/LinkedIn-dipeshsapkota7-1E293B?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHRleHQgeD0iMTIiIHk9IjE3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iMTMiIGZpbGw9IiNmZmYiPmluPC90ZXh0Pjwvc3ZnPg%3D%3D" alt="LinkedIn"/></a>
+<a href="https://dev.to/dszae"><img src="https://img.shields.io/badge/DEV-dszae-1E293B?style=for-the-badge&logo=devdotto&logoColor=white" alt="DEV"/></a>
+<a href="https://hashnode.com/@dipeshsapkota7"><img src="https://img.shields.io/badge/Hashnode-dipeshsapkota7-1E293B?style=for-the-badge&logo=hashnode&logoColor=white" alt="Hashnode"/></a>
+<a href="mailto:contact@dipeshsapkota7.com.np"><img src="https://img.shields.io/badge/Email-contact-1E293B?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
 </p>
-
-<br/>
-
-<img src="https://komarev.com/ghpvc/?username=dszae&label=PROFILE%20VIEWS&color=36BC98&style=flat-square" alt="Profile views"/>
-<img src="https://img.shields.io/github/followers/dszae?label=Followers&style=flat-square&color=36BC98" alt="GitHub followers"/>
 
 </div>
-
----
 
 ## About
 
-Computer Engineering undergraduate at **IOE Thapathali Campus, Tribhuvan University** in Kathmandu, Nepal. My technical focus centers on intelligent systems, machine learning, embedded computing, and motion graphics design.
+I'm a Computer Engineering student at **IOE Thapathali Campus, Tribhuvan University** in Kathmandu, Nepal. I explore artificial intelligence and machine learning, work with embedded systems and hardware simulation, and have spent more than four years in motion graphics and video editing for over 50 clients worldwide.
 
-- **Academic Focus:** Computer Engineering, algorithms, circuit simulation, and embedded microcontrollers.
-- **AI/ML Exploration:** Neural networks, machine learning algorithms, and intelligent data systems.
-- **Full-Stack Architecture:** Next.js (App Router, Turbopack), React 19, TypeScript, and Supabase PostgreSQL.
-- **Creative Production:** 4+ years in motion design, visual effects, and post-production workflow automation.
+- **Studying:** B.E. Computer Engineering, with a focus on digital logic, microcontrollers and circuit analysis.
+- **Exploring:** machine learning fundamentals, neural networks and numerical computing in Python.
+- **Building:** Windows utilities in C++, After Effects automation and interactive learning tools.
+- **Creating:** motion graphics, edits and color for creators and brands.
 
----
-
-## Core Domains
+## Focus areas
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### Computer Engineering & Hardware
+**Computer Engineering and Embedded Systems**
 
-Core engineering fundamentals, embedded computing, and circuit analysis.
+Digital logic, microcontrollers, circuit analysis in Proteus, and low-level Windows tooling.
 
-- C and C++
-- Microcontroller programming and logic design
-- Hardware simulation via Proteus
-- System architecture and digital logic
-
-</td>
-<td width="50%" valign="top">
-
-### Artificial Intelligence & Machine Learning
-
-Algorithmic exploration of intelligent systems and applied learning models.
-
-- Python scientific stack (NumPy, Pandas)
-- Machine learning fundamentals and evaluation
-- Neural network concepts and architecture
-- Open-source AI tooling integration
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### Application Architecture & Web
-
-Modern web platforms, high-performance APIs, and data modeling.
-
-- TypeScript and Next.js (App Router)
-- React 19, Tailwind CSS
-- Supabase (PostgreSQL), Edge Functions
-- Schema.org structured data and SEO engines
-
-</td>
-<td width="50%" valign="top">
-
-### Motion Graphics & Visual Systems
-
-Technical post-production, dynamic motion design, and editing automation.
-
-- Adobe After Effects and CEP panel automation
-- Premiere Pro, DaVinci Resolve color science
-- Design systems (Figma, Photoshop, Illustrator)
-- Frame-accurate video and audio synchronization
-
-</td>
-</tr>
-</table>
-
----
-
-## Technical Toolset
-
-### Languages & Runtimes
-
-<p>
 <img src="https://img.shields.io/badge/C-00599C?style=flat-square&logo=c&logoColor=white" alt="C"/>
 <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white" alt="C++"/>
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"/>
-<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript"/>
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript"/>
-</p>
-
-### Frameworks & Infrastructure
-
-<p>
-<img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white" alt="Next.js"/>
-<img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React"/>
-<img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS"/>
-<img src="https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white" alt="Supabase"/>
-<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
-<img src="https://img.shields.io/badge/Cloudflare-F38020?style=flat-square&logo=cloudflare&logoColor=white" alt="Cloudflare"/>
-<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git"/>
-</p>
-
-### Creative & Simulation Software
-
-<p>
-<img src="https://img.shields.io/badge/After_Effects-9999FF?style=flat-square&logo=adobeaftereffects&logoColor=white" alt="After Effects"/>
-<img src="https://img.shields.io/badge/Premiere_Pro-9999FF?style=flat-square&logo=adobepremierepro&logoColor=white" alt="Premiere Pro"/>
-<img src="https://img.shields.io/badge/DaVinci_Resolve-233A51?style=flat-square&logo=davinciresolve&logoColor=white" alt="DaVinci Resolve"/>
-<img src="https://img.shields.io/badge/Photoshop-31A8FF?style=flat-square&logo=adobephotoshop&logoColor=white" alt="Photoshop"/>
-<img src="https://img.shields.io/badge/Illustrator-FF9A00?style=flat-square&logo=adobeillustrator&logoColor=white" alt="Illustrator"/>
-<img src="https://img.shields.io/badge/Proteus_Design_Suite-004B87?style=flat-square" alt="Proteus"/>
-</p>
-
----
-
-## Featured Work
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### Git Visualizer
-
-Interactive visualization tool designed to clarify Git graph mechanics, commit topologies, branch pointers, and merge dynamics.
-
-- **Stack:** JavaScript, SVG / Canvas, Version Control Concepts
-- **Links:** [Repository](https://github.com/Dszae/git-visualizer) · [Live Demo](https://git-visualizer.dipeshsapkota7.com.np/)
+<img src="https://img.shields.io/badge/ESP32-E7352C?style=flat-square&logo=espressif&logoColor=white" alt="ESP32"/>
+<img src="https://img.shields.io/badge/Proteus-004B87?style=flat-square" alt="Proteus"/>
 
 </td>
 <td width="50%" valign="top">
 
-### IOE Admission Guide
+**Artificial Intelligence and Machine Learning**
 
-Counseling and analysis platform providing entrance cutoff forecasting, college intake analytics, and allocation simulation for engineering candidates.
+Learning models from the ground up, and the numerical Python stack that supports them.
 
-- **Stack:** Next.js, React, Analytical Data Models
-- **Links:** [Repository](https://github.com/Dszae/ioe-admission-guide) · [Live Demo](https://ioe-admission.dipeshsapkota7.com.np/)
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"/>
+<img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" alt="NumPy"/>
+<img src="https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="pandas"/>
+<img src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white" alt="Jupyter"/>
+<img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white" alt="Streamlit"/>
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-### BeatMarker
+**Motion Graphics and Video**
 
-Adobe After Effects CEP panel that automates timeline rhythm indexing by processing waveform transients into frame-accurate markers.
+Motion design, editing and color grading, plus tools that automate the slow parts of the workflow.
 
-- **Stack:** ExtendScript, CEP, Audio Spectrum Processing
-- **Links:** [Repository](https://github.com/Dszae/beatMarker)
+<img src="https://img.shields.io/badge/After_Effects-00005B?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHRleHQgeD0iMTIiIHk9IjE3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iMTMiIGZpbGw9IiM5OTk5RkYiPkFlPC90ZXh0Pjwvc3ZnPg%3D%3D" alt="After Effects"/>
+<img src="https://img.shields.io/badge/Premiere_Pro-00005B?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHRleHQgeD0iMTIiIHk9IjE3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iMTMiIGZpbGw9IiM5OTk5RkYiPlByPC90ZXh0Pjwvc3ZnPg%3D%3D" alt="Premiere Pro"/>
+<img src="https://img.shields.io/badge/DaVinci_Resolve-233A51?style=flat-square&logo=davinciresolve&logoColor=white" alt="DaVinci Resolve"/>
+<img src="https://img.shields.io/badge/Photoshop-001E36?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHRleHQgeD0iMTIiIHk9IjE3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iMTMiIGZpbGw9IiMzMUE4RkYiPlBzPC90ZXh0Pjwvc3ZnPg%3D%3D" alt="Photoshop"/>
+<img src="https://img.shields.io/badge/Illustrator-330000?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHRleHQgeD0iMTIiIHk9IjE3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iMTMiIGZpbGw9IiNGRjlBMDAiPkFpPC90ZXh0Pjwvc3ZnPg%3D%3D" alt="Illustrator"/>
+<img src="https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white" alt="Figma"/>
 
 </td>
 <td width="50%" valign="top">
 
-### Sportivo
+**Interactive Tools**
 
-Real-time sports match discovery and schedule aggregator with dynamic stream provider switching.
+Learning tools, browser extensions and live-data sites, designed, built and deployed by me.
 
-- **Stack:** Next.js, Real-time APIs, Stream Gateway
-- **Links:** [Repository](https://github.com/Dszae/sportivo) · [Live Demo](https://sportivo.dipeshsapkota7.com.np/)
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript"/>
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript"/>
+<img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React"/>
+<img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js"/>
+<img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS"/>
+<img src="https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white" alt="Supabase"/>
+<img src="https://img.shields.io/badge/Cloudflare-F38020?style=flat-square&logo=cloudflare&logoColor=white" alt="Cloudflare"/>
 
 </td>
 </tr>
 </table>
 
----
+## Selected work
 
-## GitHub Statistics
+<table>
+<tr>
+<td width="50%" valign="top">
 
-<div align="center">
+**Systems and embedded**
 
-<a href="https://github.com/Dszae">
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=dszae&show_icons=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=36BC98&icon_color=36BC98&text_color=c9d1d9&cache_seconds=1800&show=reviews,prs_merged&v=3" alt="GitHub statistics"/>
-</a>
+- **[AltTabs](https://github.com/Dszae/AltTabs)** <sub>C++</sub><br/>Keyboard-driven tab switcher HUD for Chromium browsers on Windows, built as a Windhawk mod.
+- **[Taskbar Fixer](https://github.com/Dszae/taskbar-fixer)** <sub>C++</sub><br/>Hides the Windows 11 taskbar and blocks edge reveal while chosen apps are running.
+- **[ESP32 emergency response system](https://www.dipeshsapkota7.com.np/blog/building-an-iot-emergency-response-system-with-esp32-2kgo)** <sub>ESP32 · C++ · PCB</sub><br/>Prototype for elderly care: motion and biopotential sensing that sends Wi-Fi alerts to caregivers.
+- **[555 astable LED flasher](https://www.dipeshsapkota7.com.np/projects/555-flasher)** <sub>NE555 · Proteus</sub><br/>Breadboard relaxation oscillator with calculated RC timing, simulated in Proteus.
 
-<a href="https://github.com/Dszae">
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=dszae&layout=compact&hide_border=true&bg_color=0d1117&title_color=36BC98&text_color=c9d1d9&hide=Jupyter%20Notebook&cache_seconds=1800" alt="Most used languages"/>
-</a>
+</td>
+<td width="50%" valign="top">
 
-<br/><br/>
+**Scientific computing and data**
 
-<img src="https://streak-stats.demolab.com?user=dszae&theme=dark&hide_border=true&background=0D1117&ring=36BC98&fire=36BC98&currStreakLabel=36BC98" alt="GitHub contribution streak" width="70%"/>
+- **[Invisible Physics](https://github.com/Dszae/interactive-physics-lab)** <sub>Python · NumPy</sub><br/>Unit-tested field engine and notebooks that visualize electromagnetic fields.
+- **[IOE Admission Hub](https://github.com/Dszae/ioe-admission-guide)** <sub>TypeScript</sub><br/>Rank prediction, campus explorer and priority planning for IOE applicants. [Live](https://ioe-admission.dipeshsapkota7.com.np/)
+- **[SEO Crawler](https://github.com/Dszae/Personal-Website-SEO-Crawler)** <sub>Python · Streamlit</sub><br/>Evidence-based technical SEO audits for sites you control, in a local dashboard.
 
-</div>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 
----
+**Motion and creative tooling**
+
+- **[BeatMarker](https://github.com/Dszae/beatMarker)** <sub>JavaScript · CEP</sub><br/>After Effects panel that analyzes music and places beat markers on the timeline.
+- **[After Effects Downgrader](https://github.com/Dszae/After_effects_downgrade)** <sub>JavaScript · Python</sub><br/>Rewrites RIFX container versions so newer projects and presets open in older releases. [Live](https://dszae.github.io/After_effects_downgrade/)
+
+</td>
+<td width="50%" valign="top">
+
+**Interactive tools**
+
+- **[Git Visualizer](https://github.com/Dszae/git-visualizer)** <sub>JavaScript · Canvas</sub><br/>Live commit graph, command simulator and guided lessons for learning Git. [Live](https://git-visualizer.dipeshsapkota7.com.np/)
+- **[Sportivo](https://github.com/Dszae/sportivo)** <sub>TypeScript · Next.js</sub><br/>Live scores, fixtures and match discovery for football, cricket and basketball. [Live](https://sportivo.dipeshsapkota7.com.np/)
+- **[ShieldFix](https://github.com/Dszae/ShieldFix)** <sub>TypeScript · Manifest V3</sub><br/>Privacy-first extension that removes anti-adblock walls with one reversible click.
+
+</td>
+</tr>
+</table>
+
+If one of these projects helps you, consider starring its repository. It helps others discover the work.
+
+## Writing
+
+<!-- WRITING:START -->
+- [Understanding APIs by Building a Real Web Application: Lessons from Sportivo](https://dev.to/dszae/understanding-apis-by-building-a-real-web-application-lessons-from-sportivo-2a7g) <sub>28 Oct 2026 · 7 min read</sub>
+- [Building BeatMarker: Automating After Effects Beat Detection with JavaScript](https://dev.to/dszae/building-beatmarker-automating-after-effects-beat-detection-with-javascript-344h) <sub>28 Oct 2026 · 3 min read</sub>
+- [IOE Admission Hub: Building a Rank Predictor and Campus Explorer for Nepal](https://www.dipeshsapkota7.com.np/blog/ioe-admission-hub-building-a-rank-predictor-and-campus-explorer-for-nepal-1n1f) <sub>12 Oct 2026 · 4 min read</sub>
+- [Building an ESP32-Based IoT Emergency Response System for the Elderly](https://www.dipeshsapkota7.com.np/blog/building-an-iot-emergency-response-system-with-esp32-2kgo) <sub>1 Oct 2026 · 8 min read</sub>
+- [Building Git Visualizer: Making Git Easier to Understand Through Interactive Visuals](https://www.dipeshsapkota7.com.np/blog/building-an-interactive-git-visualizer-to-master-version-control-4noa) <sub>1 Oct 2026 · 5 min read</sub>
+<!-- WRITING:END -->
+
+More on [DEV](https://dev.to/dszae), [Hashnode](https://hashnode.com/@dipeshsapkota7) and the [portfolio blog](https://www.dipeshsapkota7.com.np/blog).
 
 ## Activity
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Dszae/Dszae/output/stats-dark.svg"/>
+  <img src="https://raw.githubusercontent.com/Dszae/Dszae/output/stats-light.svg" width="100%" alt="GitHub activity for Dszae: contributions in the last year, commits, merged pull requests, reviews, stars, streaks, contributions per week and language breakdown."/>
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Dszae/Dszae/output/github-contribution-grid-snake-dark.svg"/>
+  <img src="https://raw.githubusercontent.com/Dszae/Dszae/output/github-contribution-grid-snake.svg" width="100%" alt="Contribution graph with a snake eating the contributions."/>
+</picture>
+
 <div align="center">
-
-<img src="https://raw.githubusercontent.com/Dszae/Dszae/output/github-contribution-grid-snake-dark.svg" width="100%" alt="Contribution graph snake animation"/>
-
-</div>
-
----
-
-## Contact & Connect
-
-<div align="center">
-
-[Portfolio](https://www.dipeshsapkota7.com.np/) ·
-[LinkedIn](https://linkedin.com/in/dipeshsapkota7) ·
-[GitHub](https://github.com/Dszae) ·
-[Dev.to](https://dev.to/dszae) ·
-[Hashnode](https://hashnode.com/@dipeshsapkota7) ·
-[Email](mailto:contact@dipeshsapkota7.com.np)
-
+<sub>Stats and contribution art are generated by this repository's own workflow every four hours.</sub>
+<br/><br/>
+<img src="https://komarev.com/ghpvc/?username=dszae&label=Profile%20views&color=047857&style=flat-square" alt="Profile views"/>
 </div>
