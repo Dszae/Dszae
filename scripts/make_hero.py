@@ -17,16 +17,14 @@ from pathlib import Path
 
 from theme import MONO, ROOT, SANS, THEMES, Theme, esc, font_faces, hex_motif, text_width
 
-WIDTH, HEIGHT = 1000, 340
+WIDTH, HEIGHT = 1000, 312
 LEFT, RIGHT = 56, 944
-BASE = 262                  # trace baseline
+BASE = 234                  # trace baseline
 REVEAL_DELAY, REVEAL_SECONDS = 0.25, 2.4
 PROBE_BEGIN = REVEAL_DELAY + REVEAL_SECONDS + 0.2
 LOOP_SECONDS = 7.0          # one probe pass, left to right
 KEY_STEP = 4                # px between probe keyframes
 
-PROMPT = "dipesh@thapathali:~$"
-COMMAND = "whoami"
 NAME = "Dipesh Sapkota"
 TAGLINE = "Computer Engineering Student · AI/ML Enthusiast · Motion Designer"
 PLACE = "IOE Thapathali Campus, Tribhuvan University · Kathmandu, Nepal"
@@ -135,8 +133,6 @@ def _d(pts: list[Point]) -> str:
 def render(theme: Theme) -> str:
     trace, motion = build_trace()
     key_points, key_times = probe_keys(motion)
-    prompt_w = text_width(PROMPT + " ", 15, mono=True)
-    cursor_x = LEFT + text_width(f"{PROMPT} {COMMAND}", 15, mono=True) + 4
     pin = "h9 v4 l-4.5 4.5 l-4.5 -4.5 z"
     pin_y = BASE - 50
 
@@ -156,11 +152,11 @@ def render(theme: Theme) -> str:
         )
 
     captions = "".join(
-        f'<text x="{(a + b) / 2:.1f}" y="318" text-anchor="middle" class="cap">{esc(label)}</text>'
+        f'<text x="{(a + b) / 2:.1f}" y="{HEIGHT - 22}" text-anchor="middle" class="cap">{esc(label)}</text>'
         for label, a, b in SEGMENTS
     )
     dividers = "".join(
-        f'<path d="M{x:.1f} 234 V290" stroke="{theme.grid}"/>'
+        f'<path d="M{x:.1f} {BASE - 28} V{BASE + 28}" stroke="{theme.grid}"/>'
         for x in ((SEGMENTS[0][2] + SEGMENTS[1][1]) / 2, (SEGMENTS[1][2] + SEGMENTS[2][1]) / 2)
     )
     ease = 'calcMode="spline" keyTimes="0;1" keySplines=".16 1 .3 1"'
@@ -172,9 +168,7 @@ def render(theme: Theme) -> str:
 .sans{{font-family:{SANS}}}.mono{{font-family:{MONO}}}
 .cap{{font:400 12.5px {MONO};fill:{theme.text_muted}}}
 .reveal{{clip-path:url(#sweep)}}
-.cursor{{animation:blink 1.1s steps(1) infinite}}
-@keyframes blink{{50%{{opacity:0}}}}
-@media (prefers-reduced-motion:reduce){{.reveal{{clip-path:none}}.cursor{{animation:none}}.motion{{display:none}}}}
+@media (prefers-reduced-motion:reduce){{.reveal{{clip-path:none}}.motion{{display:none}}}}
 </style>
 <defs>
 <linearGradient id="page" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{theme.page_top}"/><stop offset="1" stop-color="{theme.page_bottom}"/></linearGradient>
@@ -196,11 +190,9 @@ def render(theme: Theme) -> str:
 {hex_motif(theme, 724, -36, scale=0.66, boost=1.7)}
 </g>
 <rect x=".5" y=".5" width="{WIDTH - 1}" height="{HEIGHT - 1}" rx="15.5" fill="none" stroke="{theme.border}"/>
-<text x="{LEFT}" y="72" class="mono" font-size="15"><tspan fill="{theme.accent}">{esc(PROMPT)}</tspan><tspan x="{LEFT + prompt_w:.1f}" fill="{theme.text_secondary}">{COMMAND}</tspan></text>
-<rect class="cursor" x="{cursor_x:.1f}" y="59" width="8" height="16" rx="1" fill="{theme.accent}"/>
-<text x="{LEFT - 3}" y="136" class="sans" font-size="60" font-weight="800" letter-spacing="-1.2" fill="{theme.text_primary}">{esc(NAME)}</text>
-<text x="{LEFT}" y="174" class="sans" font-size="20" font-weight="600" fill="{theme.text_secondary}">{esc(TAGLINE)}</text>
-<text x="{LEFT}" y="202" class="mono" font-size="14" fill="{theme.text_muted}">{esc(PLACE)}</text>
+<text x="{LEFT - 3}" y="108" class="sans" font-size="60" font-weight="800" letter-spacing="-1.2" fill="{theme.text_primary}">{esc(NAME)}</text>
+<text x="{LEFT}" y="146" class="sans" font-size="20" font-weight="600" fill="{theme.text_secondary}">{esc(TAGLINE)}</text>
+<text x="{LEFT}" y="174" class="mono" font-size="14" fill="{theme.text_muted}">{esc(PLACE)}</text>
 {dividers}
 <g class="reveal" fill="none" stroke="{theme.accent}" stroke-linejoin="round" stroke-linecap="round">
 {"".join(markers)}
