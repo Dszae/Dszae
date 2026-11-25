@@ -137,8 +137,8 @@ If one of these projects helps you, consider starring its repository. It helps o
 ## Writing
 
 <!-- WRITING:START -->
-- [Understanding APIs by Building a Real Web Application: Lessons from Sportivo](https://dev.to/dszae/understanding-apis-by-building-a-real-web-application-lessons-from-sportivo-2a7g) <sub>28 Oct 2026 · 7 min read</sub>
-- [Building BeatMarker: Automating After Effects Beat Detection with JavaScript](https://dev.to/dszae/building-beatmarker-automating-after-effects-beat-detection-with-javascript-344h) <sub>28 Oct 2026 · 3 min read</sub>
+- [Understanding APIs by Building a Real Web Application: Lessons from Sportivo](https://www.dipeshsapkota7.com.np/blog/understanding-apis-by-building-a-real-web-application-lessons-from-sportivo-2a7g) <sub>28 Oct 2026 · 7 min read</sub>
+- [Building BeatMarker: Automating After Effects Beat Detection with JavaScript](https://www.dipeshsapkota7.com.np/blog/building-beatmarker-automating-after-effects-beat-detection-with-javascript-344h) <sub>28 Oct 2026 · 3 min read</sub>
 - [IOE Admission Hub: Building a Rank Predictor and Campus Explorer for Nepal](https://www.dipeshsapkota7.com.np/blog/ioe-admission-hub-building-a-rank-predictor-and-campus-explorer-for-nepal-1n1f) <sub>12 Oct 2026 · 4 min read</sub>
 - [Building an ESP32-Based IoT Emergency Response System for the Elderly](https://www.dipeshsapkota7.com.np/blog/building-an-iot-emergency-response-system-with-esp32-2kgo) <sub>1 Oct 2026 · 8 min read</sub>
 - [Building Git Visualizer: Making Git Easier to Understand Through Interactive Visuals](https://www.dipeshsapkota7.com.np/blog/building-an-interactive-git-visualizer-to-master-version-control-4noa) <sub>1 Oct 2026 · 5 min read</sub>
