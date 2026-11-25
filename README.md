@@ -19,6 +19,7 @@ I'm **Dipesh Sapkota** , a Computer Engineering student at **IOE Thapathali Camp
 - **Studying:** B.E. Computer Engineering, with a focus on digital logic, microcontrollers and circuit analysis.
 - **Exploring:** machine learning fundamentals, neural networks and numerical computing in Python.
 - **Building:** Windows utilities in C++, After Effects automation and interactive learning tools.
+- **Contributing:** to open-source projects, with [merged pull requests](https://github.com/search?q=author%3ADszae+is%3Apr+is%3Amerged+-user%3ADszae&type=pullrequests) beyond my own repositories.
 - **Creating:** motion graphics, edits and color for creators and brands.
 
 ## Focus areas
