@@ -24,6 +24,12 @@ I'm **Dipesh Sapkota** , a Computer Engineering student at **IOE Thapathali Camp
 - **Building:** Windows utilities in C++, After Effects automation and interactive learning tools.
 - **Creating:** motion graphics, edits and color for creators and brands.
 
+## Boot intro
+
+<img src="assets/boot-intro.gif" width="100%" alt="Boot intro animation: a terminal boot log types out, an ASCII portrait of Dipesh Sapkota resolves out of code, then the name and the line Learning Everyday appear."/>
+
+The power-on animation I made for my laptop: my photo rendered as ASCII on a canvas, animated with GSAP and rendered from HTML to video.
+
 ## Focus areas
 
 <table>
