@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/boot-intro.gif" width="100%" alt="Dipesh Sapkota (Dszae): a terminal boot log types out, an ASCII portrait resolves out of code, then the name and the line Learning Everyday appear."/>
+<img src="assets/intro.gif" width="100%" alt="Dipesh Sapkota (Dszae): a terminal boot log types out, an ASCII portrait resolves out of code, then the name and the line Learning Everyday appear."/>
 
 <p>
 <a href="https://www.dipeshsapkota7.com.np/"><img src="https://img.shields.io/badge/Portfolio-dipeshsapkota7.com.np-047857?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio"/></a>
