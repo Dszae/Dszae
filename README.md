@@ -17,7 +17,7 @@
 
 ## About
 
-I'm **Dipesh Sapkota** (Dszae), a Computer Engineering student at **IOE Thapathali Campus, Tribhuvan University** in Kathmandu, Nepal. I explore artificial intelligence and machine learning, work with embedded systems and hardware simulation, and have spent more than four years in motion graphics and video editing for over 50 clients worldwide.
+I'm **Dipesh Sapkota** , a Computer Engineering student at **IOE Thapathali Campus, Tribhuvan University** in Kathmandu, Nepal. I explore artificial intelligence and machine learning, work with embedded systems and hardware simulation, and have spent more than four years in motion graphics and video editing for over 50 clients worldwide.
 
 - **Studying:** B.E. Computer Engineering, with a focus on digital logic, microcontrollers and circuit analysis.
 - **Exploring:** machine learning fundamentals, neural networks and numerical computing in Python.
