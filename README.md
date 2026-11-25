@@ -1,9 +1,6 @@
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Dszae/Dszae/output/card-dark.svg"/>
-  <img src="https://raw.githubusercontent.com/Dszae/Dszae/output/card-light.svg" width="100%" alt="Dipesh Sapkota (Dszae): a portrait drawn in flowing source code beside a profile written as a TypeScript object. Computer Engineering Student, AI/ML Enthusiast and Motion Designer at IOE Thapathali Campus, Kathmandu, Nepal, with live GitHub stats."/>
-</picture>
+<img src="assets/boot-intro.gif" width="100%" alt="Dipesh Sapkota (Dszae): a terminal boot log types out, an ASCII portrait resolves out of code, then the name and the line Learning Everyday appear."/>
 
 <p>
 <a href="https://www.dipeshsapkota7.com.np/"><img src="https://img.shields.io/badge/Portfolio-dipeshsapkota7.com.np-047857?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio"/></a>
@@ -23,12 +20,6 @@ I'm **Dipesh Sapkota** , a Computer Engineering student at **IOE Thapathali Camp
 - **Exploring:** machine learning fundamentals, neural networks and numerical computing in Python.
 - **Building:** Windows utilities in C++, After Effects automation and interactive learning tools.
 - **Creating:** motion graphics, edits and color for creators and brands.
-
-## Boot intro
-
-<img src="assets/boot-intro.gif" width="100%" alt="Boot intro animation: a terminal boot log types out, an ASCII portrait of Dipesh Sapkota resolves out of code, then the name and the line Learning Everyday appear."/>
-
-The power-on animation I made for my laptop: my photo rendered as ASCII on a canvas, animated with GSAP and rendered from HTML to video.
 
 ## Focus areas
 
