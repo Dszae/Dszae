@@ -152,6 +152,21 @@ More on [DEV](https://dev.to/dszae), [Hashnode](https://hashnode.com/@dipeshsapk
 </picture>
 
 <picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Dszae/Dszae/output/activity-dark.svg"/>
+  <img src="https://raw.githubusercontent.com/Dszae/Dszae/output/activity-light.svg" width="100%" alt="Daily contributions over the last month as a line graph, with the busiest day marked."/>
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Dszae/Dszae/output/overview-dark.svg"/>
+  <img src="https://raw.githubusercontent.com/Dszae/Dszae/output/overview-light.svg" width="100%" alt="All-time totals for Dszae: contributions, commits, pull requests, issues, stars, forks, lines of code changed and repositories contributed to, beside a rank grade."/>
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Dszae/Dszae/output/profile-3d-dark.svg"/>
+  <img src="https://raw.githubusercontent.com/Dszae/Dszae/output/profile-3d-light.svg" width="100%" alt="The past year of contributions as a 3D rainbow calendar, with a radar of commits, issues, pull requests, reviews and repositories, and a language ring."/>
+</picture>
+
+<picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Dszae/Dszae/output/github-contribution-grid-snake-dark.svg"/>
   <img src="https://raw.githubusercontent.com/Dszae/Dszae/output/github-contribution-grid-snake.svg" width="100%" alt="Contribution graph with a snake eating the contributions."/>
 </picture>

@@ -55,6 +55,18 @@ jobs:
           PROFILE_STATS_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN }}
         run: python scripts/make_stats.py --out dist
 
+      - name: Generate the 3D contribution calendar
+        # Rainbow calendar, radar and language ring; colours are in .github/profile-3d-contrib.json.
+        uses: yoshi389111/github-profile-3d-contrib@v0.9.3
+        env:
+          GITHUB_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN || secrets.GITHUB_TOKEN }}
+          USERNAME: Dszae
+          SETTING_JSON: .github/profile-3d-contrib.json
+
+      - name: Add the 3D calendar to the published files
+        run: |
+          mv profile-3d-contrib/profile-3d-dark.svg profile-3d-contrib/profile-3d-light.svg dist/
+
       - name: Publish to the output branch
         uses: crazy-max/ghaction-github-pages@v5
         with:

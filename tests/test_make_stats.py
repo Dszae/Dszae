@@ -1,5 +1,7 @@
 """Stats maths and rendering, on generated data (no network)."""
 
+import dataclasses
+import json
 import re
 import xml.etree.ElementTree as ET
 from datetime import date, timedelta
@@ -7,7 +9,8 @@ from datetime import date, timedelta
 import pytest
 
 import make_stats
-from make_stats import Streak, compute, language_shares, nice_step, render, span, streaks
+from make_stats import (Streak, compute, language_shares, nice_step, rank, render, render_activity,
+                        render_overview, smooth_path, span, streaks)
 from theme import DARK, LIGHT, language_colors
 
 
@@ -132,3 +135,50 @@ def test_main_needs_a_token(monkeypatch, tmp_path, capsys):
     monkeypatch.setattr("sys.argv", ["make_stats.py", "--out", str(tmp_path)])
     assert make_stats.main() == 2
     assert not list(tmp_path.iterdir())
+
+
+def stats_with(**overrides):
+    return dataclasses.replace(compute(raw_data()), **overrides)
+
+
+@pytest.mark.parametrize("counts,level", [
+    (dict(commits_year=0, prs_total=0, issues_total=0, prs_reviewed=0, stars=0, followers=0), "C"),
+    (dict(commits_year=1359, prs_total=90, issues_total=46, prs_reviewed=24, stars=70, followers=6), "A-"),
+    (dict(commits_year=10_000, prs_total=2_000, issues_total=500, prs_reviewed=500, stars=100_000, followers=50_000), "S"),
+])
+def test_rank_follows_the_readme_stats_bands(counts, level):
+    assert rank(stats_with(**counts)).level == level
+
+
+def test_smooth_line_never_overshoots_its_points():
+    points = [(i * 20.0, y) for i, y in enumerate([200, 200, 20, 200, 200, 180, 20, 20, 200])]
+    numbers = [float(n) for n in re.findall(r"-?[\d.]+", smooth_path(points))]
+    ys = numbers[1::2]
+    assert min(ys) >= 20 and max(ys) <= 200
+
+
+def test_raw_data_without_the_newer_fields_still_renders():
+    stats = compute(raw_data())          # no forks, prs_total or issues_total
+    assert stats.forks == 0 and stats.prs_total == 146 and stats.issues_total == 0
+    assert len(stats.days) == make_stats.DAYS_SHOWN
+
+
+@pytest.mark.parametrize("theme", [DARK, LIGHT])
+def test_activity_and_overview_are_valid_svg_with_the_numbers(theme):
+    stats = stats_with(forks=7, issues_total=12, loc_added=1000, loc_deleted=500, contributed_to=5)
+    activity = " ".join(ET.fromstring(render_activity(stats, theme)).itertext())
+    assert f"{sum(n for _, n in stats.days):,} contributions" in activity
+    overview = " ".join(ET.fromstring(render_overview(stats, theme)).itertext())
+    for expected in (f"{stats.contributions_all:,}", "1,500", "12", rank(stats).level):
+        assert expected in overview
+
+
+def test_main_renders_every_card_from_saved_data(monkeypatch, tmp_path):
+    saved = tmp_path / "raw.json"
+    saved.write_text(json.dumps(raw_data()), encoding="utf-8")
+    out = tmp_path / "out"
+    monkeypatch.setattr("sys.argv", ["make_stats.py", "--out", str(out), "--from-json", str(saved)])
+    assert make_stats.main() == 0
+    names = {p.name for p in out.iterdir()}
+    for kind in ("stats", "card", "activity", "overview"):
+        assert {f"{kind}-dark.svg", f"{kind}-light.svg"} <= names

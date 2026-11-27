@@ -19,7 +19,7 @@ import sys
 import time
 import urllib.error
 import urllib.request
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, field
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
@@ -30,6 +30,9 @@ LOGIN = "Dszae"
 API = "https://api.github.com/graphql"
 EXCLUDED_LANGUAGES = {"Jupyter Notebook"}   # notebook JSON outweighs the code in it
 TOP_LANGUAGES = 5
+DAYS_SHOWN = 31                             # daily activity graph: about one month
+RANK_LEVELS = ((1, "S"), (12.5, "A+"), (25, "A"), (37.5, "A-"), (50, "B+"),
+               (62.5, "B"), (75, "B-"), (87.5, "C+"), (100, "C"))
 
 # --- fetching ----------------------------------------------------------------------
 
@@ -39,6 +42,8 @@ query($login: String!, $merged: String!, $reviewed: String!) {
     id
     createdAt
     followers { totalCount }
+    pullRequests { totalCount }
+    issues { totalCount }
     repositoriesContributedTo(first: 1, includeUserRepositories: false,
       contributionTypes: [COMMIT, PULL_REQUEST, ISSUE, PULL_REQUEST_REVIEW, REPOSITORY]) { totalCount }
     contributionsCollection {
@@ -65,7 +70,7 @@ query($login: String!, $cursor: String) {
   user(login: $login) {
     repositories(first: 100, after: $cursor, ownerAffiliations: OWNER, privacy: PUBLIC) {
       pageInfo { hasNextPage endCursor }
-      nodes { name isFork stargazerCount languages(first: 25, orderBy: {field: SIZE, direction: DESC}) { edges { size node { name } } } }
+      nodes { name isFork stargazerCount forkCount languages(first: 25, orderBy: {field: SIZE, direction: DESC}) { edges { size node { name } } } }
     }
   }
 }"""
@@ -136,7 +141,7 @@ def fetch(token: str, today: date | None = None) -> dict:
     while True:
         page = graphql(REPOS_QUERY, {"login": LOGIN, "cursor": cursor}, token)["user"]["repositories"]
         repos += [
-            {"name": r["name"], "fork": r["isFork"], "stars": r["stargazerCount"],
+            {"name": r["name"], "fork": r["isFork"], "stars": r["stargazerCount"], "forks": r["forkCount"],
              "languages": {e["node"]["name"]: e["size"] for e in r["languages"]["edges"]}}
             for r in page["nodes"]
         ]
@@ -173,6 +178,8 @@ def fetch(token: str, today: date | None = None) -> dict:
         "loc_deleted": deleted,
         "prs_merged": profile["merged"]["issueCount"],
         "prs_reviewed": profile["reviewed"]["issueCount"],
+        "prs_total": user["pullRequests"]["totalCount"],
+        "issues_total": user["issues"]["totalCount"],
         "weeks": [[[d["date"], d["contributionCount"]] for d in w["contributionDays"]]
                   for w in year["contributionCalendar"]["weeks"]],
         "history": sorted(history.items()),
@@ -266,6 +273,12 @@ class Stats:
     contributed_to: int = 0
     loc_added: int = 0
     loc_deleted: int = 0
+    forks: int = 0
+    contributions_all: int = 0
+    prs_total: int = 0
+    issues_total: int = 0
+    days: list[tuple[date, int]] = field(default_factory=list)
+    joined: date | None = None
 
 
 def compute(raw: dict) -> Stats:
@@ -290,7 +303,48 @@ def compute(raw: dict) -> Stats:
         contributed_to=raw.get("contributed_to", 0),
         loc_added=raw.get("loc_added", 0),
         loc_deleted=raw.get("loc_deleted", 0),
+        forks=sum(repo.get("forks", 0) for repo in raw["repos"]),
+        contributions_all=sum(n for _, n in raw["history"]),
+        prs_total=raw.get("prs_total", raw["prs_merged"]),
+        issues_total=raw.get("issues_total", 0),
+        days=[(date.fromisoformat(d), n) for d, n in raw["history"][-DAYS_SHOWN:]],
+        joined=date.fromisoformat(raw["history"][0][0]) if raw["history"] else None,
     )
+
+
+@dataclass(frozen=True)
+class Rank:
+    level: str
+    percentile: float          # lower is better: 5.0 means top 5%
+
+
+def _exponential_cdf(x: float) -> float:
+    return 1 - 2 ** -x
+
+
+def _log_normal_cdf(x: float) -> float:
+    return x / (1 + x)
+
+
+def rank(stats: Stats) -> Rank:
+    """Grade on the github-readme-stats scale, so it reads like the familiar card.
+
+    Each count is scored against a typical GitHub user (the median) and weighted;
+    the weights, medians and grade bands are the ones that card uses.
+    """
+    scored = [
+        (2, _exponential_cdf(stats.commits_year / 250)),
+        (3, _exponential_cdf(stats.prs_total / 50)),
+        (1, _exponential_cdf(stats.issues_total / 25)),
+        (1, _exponential_cdf(stats.prs_reviewed / 2)),
+        (4, _log_normal_cdf(stats.stars / 50)),
+        (1, _log_normal_cdf(stats.followers / 10)),
+    ]
+    percentile = (1 - sum(w * s for w, s in scored) / sum(w for w, _ in scored)) * 100
+    for threshold, level in RANK_LEVELS:
+        if percentile <= threshold:
+            return Rank(level, percentile)
+    return Rank(RANK_LEVELS[-1][1], percentile)
 
 
 # --- rendering ---------------------------------------------------------------------
@@ -465,13 +519,158 @@ def render(stats: Stats, theme: Theme) -> str:
     )
 
 
+def _card(title: str, summary: str, height: float, body: list[str], theme: Theme, defs: str = "") -> str:
+    """Wrap a 900px-wide card body in the shared frame, fonts and accessible title."""
+    return (
+        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {height:.0f}" width="{W}" height="{height:.0f}" role="img" aria-labelledby="t d">'
+        f'<title id="t">{esc(title)}</title><desc id="d">{esc(summary)}</desc>'
+        f'<style>{font_faces()}.s{{font-family:{SANS}}}.m{{font-family:{MONO}}}.tab{{font-variant-numeric:tabular-nums}}</style>'
+        f'{defs}<rect x=".5" y=".5" width="{W - 1}" height="{height - 1:.0f}" rx="16" fill="{theme.surface}" stroke="{theme.border}"/>'
+        + "".join(body) + "</svg>\n"
+    )
+
+
+def _header(title: str, note: str, theme: Theme) -> list[str]:
+    return [
+        f'<text x="{PAD}" y="48" class="s" font-size="18" font-weight="700" fill="{theme.text_primary}">{esc(title)}</text>',
+        f'<text x="{W - PAD}" y="48" text-anchor="end" class="m" font-size="12" fill="{theme.text_muted}">{esc(note)}</text>',
+    ]
+
+
+def smooth_path(points: list[tuple[float, float]]) -> str:
+    """Monotone cubic curve through the points: it never overshoots a point, so it never dips below zero."""
+    if len(points) < 2:
+        return "".join(f"M{x:.1f} {y:.1f}" for x, y in points)
+    slopes = [(y1 - y0) / (x1 - x0) for (x0, y0), (x1, y1) in zip(points, points[1:])]
+    tangents = [slopes[0]]
+    for before, after in zip(slopes, slopes[1:]):
+        tangents.append(0.0 if before * after <= 0 else 2 * before * after / (before + after))
+    tangents.append(slopes[-1])
+    d = [f"M{points[0][0]:.1f} {points[0][1]:.1f}"]
+    for i, ((x0, y0), (x1, y1)) in enumerate(zip(points, points[1:])):
+        h = (x1 - x0) / 3
+        d.append(f"C{x0 + h:.1f} {y0 + tangents[i] * h:.1f} {x1 - h:.1f} {y1 - tangents[i + 1] * h:.1f} {x1:.1f} {y1:.1f}")
+    return "".join(d)
+
+
+def render_activity(stats: Stats, theme: Theme) -> str:
+    """Daily contributions over the last month as a smooth line with a soft area beneath."""
+    out = _header("Daily contributions", f"@{LOGIN} · last {len(stats.days)} days", theme)
+    days = stats.days
+    total = sum(n for _, n in days)
+    active = sum(1 for _, n in days if n > 0)
+    today = days[-1][1] if days else 0
+    out.append(f'<text x="{PAD}" y="76" class="m" font-size="11.5" fill="{theme.text_muted}">'
+               f'{total:,} contributions · active on {active} of {len(days)} days · today {today:,}</text>')
+
+    plot_left, plot_right, plot_top, base = PAD + 34, W - PAD, 116, 286
+    peak = max((n for _, n in days), default=0)
+    # Three to five gridline steps, whichever leaves the least empty space above the peak.
+    ticks, step = min(((t, nice_step(peak, ticks=t)) for t in (3, 4, 5)), key=lambda ts: (ts[0] * ts[1], ts[0]))
+    scale_top = step * ticks
+    for k in range(ticks + 1):
+        tick = step * k
+        y = base - (base - plot_top) * tick / scale_top
+        out.append(f'<path d="M{plot_left} {y:.1f}H{plot_right}" stroke="{theme.grid}"/>')
+        out.append(f'<text x="{plot_left - 8}" y="{y + 4:.1f}" text-anchor="end" class="m tab" font-size="11" fill="{theme.text_muted}">{tick:,}</text>')
+
+    inset = 12
+    gap = (plot_right - plot_left - 2 * inset) / max(len(days) - 1, 1)
+    points = [(plot_left + inset + i * gap, base - (base - plot_top) * n / scale_top) for i, (_, n) in enumerate(days)]
+    defs = ""
+    if points:
+        line = smooth_path(points)
+        defs = (f'<defs><linearGradient id="area" x1="0" y1="{plot_top}" x2="0" y2="{base}" gradientUnits="userSpaceOnUse">'
+                f'<stop offset="0" stop-color="{theme.accent}" stop-opacity=".30"/>'
+                f'<stop offset="1" stop-color="{theme.accent}" stop-opacity="0"/></linearGradient></defs>')
+        out.append(f'<path d="{line}L{points[-1][0]:.1f} {base}L{points[0][0]:.1f} {base}Z" fill="url(#area)"/>')
+        out.append(f'<path d="{line}" fill="none" stroke="{theme.accent}" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>')
+
+    peak_index = max(range(len(days)), key=lambda i: days[i][1]) if days and peak > 0 else None
+    for i, ((x, y), (day, n)) in enumerate(zip(points, days)):
+        if i == peak_index:
+            out.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="4.5" fill="{theme.amber_mark}" stroke="{theme.surface}" stroke-width="2"/>')
+        else:
+            out.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="3.2" fill="{theme.surface}" stroke="{theme.accent}" stroke-width="2"/>')
+        out.append(f'<text x="{x:.1f}" y="{base + 20}" text-anchor="middle" class="m tab" font-size="10.5" fill="{theme.text_muted}">{day.day}</text>')
+        if i == 0 or day.day == 1:
+            out.append(f'<text x="{x:.1f}" y="{base + 37}" text-anchor="middle" class="s" font-size="11.5" font-weight="600" fill="{theme.text_secondary}">{day:%b}</text>')
+    if peak_index is not None:
+        x, y = points[peak_index]
+        label = f"peak {peak:,} · {_day(days[peak_index][0])}"
+        width = text_width(label, 11, mono=True)
+        anchor = "middle"
+        if x + width / 2 > plot_right:
+            anchor = "end"
+        elif x - width / 2 < plot_left:
+            anchor = "start"
+        out.append(f'<text x="{x:.1f}" y="{y - 12:.1f}" text-anchor="{anchor}" class="m" font-size="11" fill="{theme.text_secondary}">{esc(label)}</text>')
+
+    first = _day(days[0][0]) if days else "–"
+    last = _day(days[-1][0]) if days else "–"
+    summary = (f"Daily contributions from {first} to {last}: {total:,} in total, active on {active} of {len(days)} days, "
+               f"busiest day {peak:,}" + (f" on {_day(days[peak_index][0])}" if peak_index is not None else "") + ".")
+    return _card(f"Daily GitHub contributions for {LOGIN}", summary, base + 56, out, theme, defs)
+
+
+def render_overview(stats: Stats, theme: Theme) -> str:
+    """All-time totals in two columns, with the rank grade in a ring beside them."""
+    grade = rank(stats)
+    since = f" · since {stats.joined.year}" if stats.joined else ""
+    out = _header("All-time overview", f"@{LOGIN}{since}", theme)
+
+    rows = [
+        ("Contributions", f"{stats.contributions_all:,}"),
+        ("Commits", f"{stats.commits_all:,}"),
+        ("Pull requests opened", f"{stats.prs_total:,}"),
+        ("Issues opened", f"{stats.issues_total:,}"),
+        ("Stars earned", f"{stats.stars:,}"),
+        ("Forks of my repositories", f"{stats.forks:,}"),
+        ("Lines of code changed", f"{stats.loc_added + stats.loc_deleted:,}"),
+        ("Repositories contributed to", f"{stats.contributed_to:,}"),
+    ]
+    divider_x = 640
+    col_gap = 44
+    col_w = (divider_x - 40 - PAD - col_gap) / 2
+    row_h, top = 40, 78
+    per_col = (len(rows) + 1) // 2
+    for i, (label, value) in enumerate(rows):
+        col, row = divmod(i, per_col)
+        x0 = PAD + col * (col_w + col_gap)
+        y = top + row * row_h
+        out.append(f'<text x="{x0:.1f}" y="{y + 25}" class="s" font-size="13.5" font-weight="500" fill="{theme.text_secondary}">{esc(label)}</text>')
+        out.append(f'<text x="{x0 + col_w:.1f}" y="{y + 25}" text-anchor="end" class="s tab" font-size="16" font-weight="700" fill="{theme.text_primary}">{esc(value)}</text>')
+        if row < per_col - 1:
+            out.append(f'<path d="M{x0:.1f} {y + row_h:.1f}H{x0 + col_w:.1f}" stroke="{theme.grid}"/>')
+    bottom = top + per_col * row_h
+    out.append(f'<path d="M{divider_x} {top + 6}V{bottom - 6}" stroke="{theme.grid}"/>')
+
+    # Rank ring: the filled share is how far ahead of the typical user the profile sits.
+    cx, cy, r = (divider_x + W - PAD) / 2, top + (bottom - top) / 2 - 10, 52
+    circumference = 2 * math.pi * r
+    filled = max(0.02, min(1.0, 1 - grade.percentile / 100))
+    out.append(f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r}" fill="none" stroke="{theme.grid}" stroke-width="10"/>')
+    out.append(f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r}" fill="none" stroke="{theme.accent}" stroke-width="10" stroke-linecap="round" '
+               f'stroke-dasharray="{circumference:.1f}" stroke-dashoffset="{circumference * (1 - filled):.1f}" transform="rotate(-90 {cx:.1f} {cy:.1f})"/>')
+    out.append(f'<text x="{cx:.1f}" y="{cy + 12:.1f}" text-anchor="middle" class="s" font-size="34" font-weight="800" fill="{theme.text_primary}">{esc(grade.level)}</text>')
+    top_share = max(1, round(grade.percentile))
+    out.append(f'<text x="{cx:.1f}" y="{cy + r + 30:.1f}" text-anchor="middle" class="m" font-size="11.5" fill="{theme.text_muted}">rank · top {top_share}%</text>')
+
+    summary = ("All time: " + ", ".join(f"{label.lower()} {value}" for label, value in rows)
+               + f". Rank {grade.level} (top {top_share}%) on the github-readme-stats scale.")
+    return _card(f"All-time GitHub overview for {LOGIN}", summary, bottom + 26, out, theme)
+
+
 def to_json(stats: Stats) -> dict:
     data = asdict(stats)
     data["weeks"] = [[d.isoformat(), n] for d, n in stats.weeks]
+    data["days"] = [[d.isoformat(), n] for d, n in stats.days]
+    grade = rank(stats)
+    data["rank"] = {"level": grade.level, "percentile": round(grade.percentile, 2)}
     data["languages"] = [[n, round(s, 4)] for n, s in stats.languages]
     for key in ("current", "longest"):
         data[key] = {k: (v.isoformat() if isinstance(v, date) else v) for k, v in data[key].items()}
-    for key in ("last_active", "updated"):
+    for key in ("last_active", "updated", "joined"):
         data[key] = data[key].isoformat() if data[key] else None
     return data
 
@@ -503,11 +702,13 @@ def main() -> int:
     for theme in THEMES:
         (args.out / f"stats-{theme.name}.svg").write_text(render(stats, theme), encoding="utf-8")
         (args.out / f"card-{theme.name}.svg").write_text(card.render(stats, theme), encoding="utf-8")
+        (args.out / f"activity-{theme.name}.svg").write_text(render_activity(stats, theme), encoding="utf-8")
+        (args.out / f"overview-{theme.name}.svg").write_text(render_overview(stats, theme), encoding="utf-8")
     (args.out / "stats.json").write_text(json.dumps(to_json(stats), indent=2) + "\n", encoding="utf-8")
     print(f"Wrote stats cards to {args.out}: {stats.contributions_year:,} contributions, "
           f"{stats.commits_year:,} commits, {stats.prs_merged} PRs merged, {stats.stars} stars, "
           f"{stats.followers} followers, {stats.loc_added - stats.loc_deleted:,} lines of code, "
-          f"streak {stats.current.days} (longest {stats.longest.days})")
+          f"streak {stats.current.days} (longest {stats.longest.days}), rank {rank(stats).level}")
     return 0
 
 
